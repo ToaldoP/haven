@@ -1,0 +1,208 @@
+/*====RESET=====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*=====VARIABLES=====*/
+
+:root {
+  --main: hsla(0, 0%, 28%, 1);
+  --background-icons: hsla(0, 0%, 96%, 1);
+  --card: hsla(0, 0%, 98%, 1);
+}
+
+
+
+
+
+/*====TOP-BAR====*/
+
+/*cria top-bar e posiciona*/
+#top-bar {
+  position: fixed;
+}
+
+#top-bar::before {
+  content: '';
+  width: 22.5rem;
+  height: 5rem;
+  background: var(--main);
+  top: 0;
+  z-index: -1;
+  position: fixed;
+}
+
+/*menu da top-bar*/
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18.75rem;
+  margin-left: 1.87rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: fixed;
+  top: 1;
+}
+
+/*cria e posiciona elemento decorativo atras da imagem do anuncio */
+#dark-card {
+  position: absolute;
+}
+
+#dark-card::before {
+  content: '';
+  width: 22.5rem;
+  height: 18rem;
+  background: var(--main);
+  position: absolute;
+  z-index: -1;
+  border-radius: 0% 0% 50% 50% / 0% 0% 10% 10%;
+}
+
+.share {
+  width: 2.3rem;
+  height: 2.12rem;
+}
+
+/*====CARD DO ANUNCIO====*/
+
+/*cria e posiona card do anuncio com imagem*/
+#card {
+  width: 18.75rem;
+  height: auto;
+  margin-left: 1.87rem;
+  margin-right: 1.87rem;
+  position: relative;
+  z-index: -1;
+  padding-top: 5rem;
+}
+
+/* descrição do anuncio versão resumida */
+#description {
+  padding-top: 0rem;
+  display: grid;
+  gap: 0.2rem;
+}
+/* botão de mais informações*/
+#more-infos {
+  display: flex;
+  align-items: center;
+}
+
+#more-infos .arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*botão para entrar em contato*/
+#contact {
+  background-color: var(--main);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 1.625rem;
+  margin-top: 1.175rem;
+  width: 12.5rem ;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.06rem;
+  border-radius: 0.93rem ;
+}
+
+
+
+/*=====BOTTOM-BAR=====*/
+
+/*cria e posiciona elemento para a bottom-bar*/
+#bottom-bar::before {
+  content: '';
+  width: 22.5rem;
+  height: 3.5rem;
+  background: var(--main);
+  position: fixed;
+  z-index: -1;
+}
+
+#bottom-bar {
+  display: flex;
+  position: fixed;
+ 
+
+}
+
+/*icone de inicio*/
+#home {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.75rem;
+  padding-top: 0.5rem;
+  display: inline-grid;
+  gap: 0.1rem;
+}
+
+/*icone de favoritos*/
+#favorites {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 3.43rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  align-content: center;
+}
+
+/*===Aparencia====*/
+
+body {
+  font: 400 1rem 'Roboto', sans-serif;
+}
+
+.logo {
+  font: 400 2.5rem 'Chivo', sans-serif;
+  color: var(--background-icons);
+}
+
+h1 {
+  font: 700 1.25rem 'Roboto', sans-serif;
+}
+
+.area {
+  font: 700 1rem 'Roboto', sans-serif;
+}
+
+#more-infos {
+  font: 400 1rem 'Roboto', sans-serif;
+  font-style: italic;
+  
+}
+
+#contact {
+  font: 400 1rem 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: var(--background-icons);
+}
+
+#home .inicio {
+  font: 400 1rem 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  color: var(--background-icons);
+}
+
+#favorites .favoritos {
+  font: 400 1rem 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  color: var(--background-icons);
+}
