@@ -14,8 +14,8 @@
    <!--FONTS-->
   
    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chivo&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chivo&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
 
 
@@ -29,38 +29,49 @@
                 <a href=""></a>
               </nav>
          </nav>
-     </div>
-                <div id=dark-card></div>       
+     </div>     <div id=dark-card></div> 
+
+      <a href="open-share-modal"></a>
+        <div id="open-share-modal" class="modal">
+
+        </div>
+
+                      
     </header>
 
 
     
-    <main id="card">
-       <section >
-         <nav class="=image"> 
+    <main id="card">   
+         <nav class="main-photo"> 
         <img src="imgs/house1.png" alt="foto do imovel" />
        </nav>
     
         <div  id="description">
-          <h1 class="title">Casa 3 dormitórios </h1>
+
+           <h1 class="title">Casa 3 dormitórios </h1>
            <h2 class="area">132m² </h2>
-           <p class="location">Santana - São Paulo/SP </p>
-           <p class="address">Rua Voluntários da Pátria, 452 </p>
-           <p class="garage">Garagem - 2 vagas </p>
-           <p class="bathrooms">Banheiros - 2 </p>           
-          
-          </section>
-      </div>   
+           <p id="location" class="info-text">Santana - São Paulo/SP </p>
+           <p id="address" class="info-text">Rua Voluntários da Pátria, 452 </p>
+           <p id="garage" class="info-text">Garagem - 2 vagas </p>
+           <p id="bathrooms" class="info-text">Banheiros - 2 </p>                   
+       </div>   
 
-       <nav id ="more-infos">
-        
-        <a href="#">Mais infos<img class="arrow" src="icons/arrow-bottom-icon.svg" alt="seta para baixo"></a>
-                
+
+       <nav id ="more-infos"><a href="#">Mais infos<img class="arrow" src="icons/arrow-bottom-icon.svg" alt="seta para baixo"></a>       
        </nav>
-    </main>
-             
-             <a id="contact" href="#">Contatar anunciante</a>
 
+       <a id="contact" href="#">Contatar anunciante</a>
+               
+        </nav>
+        
+ 
+    </main>
+
+
+    
+
+            
+            
 
   <!-- bottom bar-->
     <footer>
@@ -87,23 +98,37 @@
          </div>
  
    
+         <a class="buttom-qr" href="#"></a>
+         <img class="qr-scanner" src="icons/qr-icon.svg" alt=""> 
+         </nav>   
          
-         <a href="#"></a><img class="qr-scanner" src="icons/qr-icon.svg" alt=""> 
-
          
+       <section id="modals">
+         <nav class="contact-modal show">
+          <div class="open-contact">
+           <p class="contact-label">Entre em contato</p>
+           <hr class="hr1">
+           <p class="title">Casa 3 dormitórios </p>
+           <p class="area">132m² </p>        
+           <p id="phone" class="label-text">Telefone: </p>
+           <p id="mobile" class="label-text">Celular:</p>
+           <p id="commercial-address" class="label-text">Endereço: </p>
+           <p id="website" class="label-text">Site: </p>
+           <p class="label-text">Envie uma mensagem agora mesmo<p> 
+            <hr class="hr2">
+          </div>
+          
+            
+                       
            
-      
-    
+
+      <a href="#">Whatsapp <img class="whatsapp-icon" src="icons/whatsapp-icon.svg" alt=""> </a>
+      <a href="#">Telegram <img class="telegram-icon" src="icons/telegram-icon.svg" alt=""> </a>
+      <a href="#">Messenger <img class="messenger-icon" src="icons/messenger-icon.svg" alt=""> </a>
+        </section>
 
 
-
-
-
-       
-         </nav>          
+        
     </footer>
-
-    <img src="imgs/house1.png" alt="">
-  
   </body>
 </html>

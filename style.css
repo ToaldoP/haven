@@ -40,7 +40,7 @@ img {
   height: 5rem;
   background: var(--main);
   top: 0;
-  z-index: 1;
+  z-index: 10;
   position: fixed;
 }
 
@@ -57,7 +57,7 @@ img {
   margin-bottom: 1rem;
   margin-top: 1rem;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   top: 0;
 }
 
@@ -93,7 +93,12 @@ img {
   position: relative;
   z-index: -1;
   padding-top: var(--top-bar-height);
-  background-color: var(--card);
+  background-color:var(--card);
+  border-radius: 40% 40% 0 0;
+}
+
+#card img{
+  border-radius: 5%;
 }
 
 /* descrição do anuncio versão resumida */
@@ -113,19 +118,55 @@ img {
   vertical-align: middle;
 }
 
-/*botão para entrar em contato*/
+/*botão e modal para entrar em contato*/
 #contact {
   background-color: var(--main);
-  margin-left: 5rem;
-  margin-right: 5rem;
   margin-bottom: 1.625rem;
   margin-top: 1.175rem;
+  margin-left: 2.5rem;
   width: 12.5rem;
   height: 2.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.93rem;
+}
+
+nav .open-contact{
+ opacity: 0;
+ visibility: hidden;
+}
+
+nav .show .open-contact{
+  opacity: 1;
+  visibility: visible;
+  width: 18.875rem;
+  height: 26.75rem;
+  border-radius: 3% 3% 0 0;
+  background-color:var(--card);
+  position: fixed;
+  margin-left: var(--margin-card);
+  bottom: 31.2%;
+  z-index: 10; 
+}
+
+
+.open-contact{
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  padding-bottom: 5rem;
+
+}
+
+#modals img{
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+#modals .whatsapp-icon{
 }
 
 /*=====BOTTOM-BAR=====*/
@@ -138,6 +179,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  z-index: 10;
 }
 
 .bottom-icon {
@@ -180,11 +222,10 @@ img {
   margin-left: 14.7rem;
 }
 
-#bottom-bar::before {
-  /* elipse do qr scanner*/
-  content: '';
+ 
+#bottom-bar .buttom-qr{
   width: 3.75rem;
-  height: 3.19rem;
+  height: 3.75rem;
   color: var(--background-icons);
   border-radius: 100%;
   background: var(--background-icons);
@@ -193,19 +234,21 @@ img {
   border-color: var(--main);
   top: 0;
   position: fixed;
-  z-index: 99;
+  z-index: 0;
   margin-top: 35.75rem;
   margin-left: 9.375rem;
 }
 
-.qr-scanner {
+#bottom-bar .qr-scanner{
+  position: absolute;
+  z-index: 0;
   width: 3rem;
   height: 2.375rem;
-  margin-left: 3rem;
-
-  position: relative;
-  z-index: 100;
+margin-left: 9.75rem ;
+margin-bottom: 1.5rem;
+bottom: 0%;
 }
+
 
 /*===Fonts====*/
 
@@ -218,15 +261,15 @@ body {
   color: var(--background-icons);
 }
 
-#description .title {
+ .title {
   font: 700 1.25rem 'Roboto', sans-serif;
 }
 
-#description .area {
+  .area {
   font: 700 1rem 'Roboto', sans-serif;
 }
 
-#description .location .address .garage .bathrooms {
+.info-text {
   font: 400 1rem 'Roboto', sans-serif;
 }
 
@@ -236,7 +279,7 @@ body {
 }
 
 #contact {
-  font: 400 1rem 'Roboto', sans-serif;
+  font: 400 'Roboto', sans-serif;
   font-size: 1.125rem;
   color: var(--background-icons);
 }
@@ -245,7 +288,63 @@ body {
 .favorite-text,
 .chat-text,
 .profile-text {
-  font: 400 1rem 'Roboto', sans-serif;
+  font: 400 'Roboto', sans-serif;
   font-size: 0.75rem;
   color: var(--background-icons);
+  display: grid;
+}
+
+
+#modals .title{
+  margin-left:0.625rem;
+  max-height: 1.25rem;
+  }
+
+.cod{
+  font: 500 0.875rem 'Roboto', sans-serif;
+  color:hsl(0, 0, 67);
+  opacity: 50%;
+}
+
+#modals .area{
+  font: 700 1rem 'Roboto', sans-serif;
+  margin-left:0.625rem;
+
+}
+
+.contact-label{
+  font: 300 'Roboto', sans-serif;
+  font-size: 1.375rem;
+  font-style: italic;
+  color: var(--main);
+  margin-left: 1.875rem;
+  max-height: 1.1875rem;
+}
+
+
+
+.label-text{
+  font: 500 1rem 'Roboto', sans-serif;
+  color: var(--main);
+  font-style:medium;
+  margin-left:0.625rem;
+
+}
+
+.hr1 {
+  border: 0;
+  border-top: 1px solid #CCC;
+  height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#modals .hr2 {
+  border: 0;
+  border-top: 1px solid #CCC;
+  height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 1.5rem;
+
 }
