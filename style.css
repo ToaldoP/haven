@@ -30,225 +30,204 @@ img {
 /*====TOP-BAR====*/
 
 /*cria top-bar e posiciona*/
-#top-bar {
-  position: fixed;
-}
 
-#top-bar::before {
-  content: '';
+#top-bar {
   width: 22.5rem;
   height: 5rem;
   background: var(--main);
   top: 0;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
 }
 
 /*menu da top-bar*/
 .menu-top {
+  height: 5rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: baseline;
   flex-wrap: nowrap;
   flex-direction: row;
-  width: 18.75rem;
   margin-left: var(--margin-card);
   margin-right: var(--margin-card);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  position: fixed;
-  z-index: 11;
-  top: 0;
-}
-
-/*cria e posiciona elemento decorativo atras da imagem do anuncio */
-#dark-card {
-  position: absolute;
-}
-
-#dark-card::before {
-  content: '';
-  width: 22.5rem;
-  height: 18rem;
-  background: var(--main);
-  position: absolute;
-  z-index: -1;
-  border-radius: 0% 0% 50% 50% / 0% 0% 10% 10%;
+  top: 100;
+  position: relative;
 }
 
 #top-bar .share {
   width: var(--bottom-icon-size);
   height: var(--bottom-icon-size);
-  margin-left: 9.56rem;
 }
 
 /*====CARD DO ANUNCIO====*/
 
+#background {
+  /*wrapper dos cards*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  z-index: 10;
+}
+
+/*cria e posiciona elemento decorativo atras da imagem do anuncio */
+.dark-card::before {
+  content: '';
+  width: 22.5rem;
+  height: 18rem;
+  position: absolute;
+  background: var(--main);
+  z-index: 0;
+  border-radius: 0% 0% 50% 50% / 0% 0% 7% 7%;
+}
+
 /*cria e posiona card do anuncio com imagem*/
-#card {
+.card {
   width: 18.75rem;
   height: auto;
   margin-left: var(--margin-card);
   margin-right: var(--margin-card);
-  position: relative;
-  z-index: -1;
-  padding-top: var(--top-bar-height);
-  background-color:var(--card);
+  position: absolute;
+  z-index: 0;
+  top: var(--top-bar-height); /*se afasta do top*/
   border-radius: 40% 40% 0 0;
+  transform: translateX(0%);
 }
 
-#card img{
+.card .main-photo {
   border-radius: 5%;
 }
 
 /* descrição do anuncio versão resumida */
 #description {
-  margin-top: 1.25rem;
+  margin-top: 0.7rem;
   display: grid;
   gap: 0.3125rem;
 }
 /* botão de mais informações*/
 #more-infos {
   display: inline-flex;
-  margin-top: 0.625rem;
+  margin-top: 0.5rem;
 }
 
 #more-infos .arrow {
-  width: var(--bottom-icon-size);
+  width: 1.125rem;
   vertical-align: middle;
 }
 
 /*botão e modal para entrar em contato*/
 #contact {
   background-color: var(--main);
-  margin-bottom: 1.625rem;
-  margin-top: 1.175rem;
-  margin-left: 2.5rem;
   width: 12.5rem;
   height: 2.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.93rem;
+  position: relative;
+  margin-left: 3rem;
+  margin-top: 1.75rem;
 }
 
-nav .open-contact{
- opacity: 0;
- visibility: hidden;
+/*
+nav .open-contact {
+  opacity: 0;
+  visibility: hidden;
 }
 
-nav .show .open-contact{
+nav .show .open-contact {
   opacity: 1;
   visibility: visible;
   width: 18.875rem;
   height: 26.75rem;
   border-radius: 3% 3% 0 0;
-  background-color:var(--card);
-  position: fixed;
+  background-color: red;
+  position: absolute;
   margin-left: var(--margin-card);
-  bottom: 31.2%;
-  z-index: 10; 
+  z-index: 10;
 }
 
-
-.open-contact{
+.open-contact {
   display: grid;
   gap: 1rem;
   align-content: center;
   padding-bottom: 5rem;
-
 }
-
-#modals img{
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-  z-index: 10;
-}
-
-#modals .whatsapp-icon{
-}
+*/
 
 /*=====BOTTOM-BAR=====*/
 
 #bottom-bar {
-  position: fixed;
-  width: 22.5rem;
-  height: var(--bottom-bar-height);
-  background-color: var(--main);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  z-index: 10;
-}
-
-.bottom-icon {
-  width: var(--bottom-icon-size);
-  min-height: var(--bottom-icon-size);
+  height: 3.5rem;
+  display: grid;
   align-items: center;
-  position: relative;
-  padding-top: 0.5rem;
-  padding-bottom: 0.75rem;
-}
-
-.home-icon {
-  margin-left: 1.56rem;
-}
-.home-text {
-  margin-left: 1.43rem;
-}
-
-.favorite-icon {
-  margin-left: 4.3125rem;
-}
-
-.favorite-text {
-  margin-left: 3.3875rem;
-}
-
-.chat-icon {
-  margin-left: 12.0625rem;
-}
-
-.chat-text {
-  margin-left: 11.75rem;
-}
-
-.profile-icon {
-  margin-left: 14.875rem;
-}
-
-.profile-text {
-  margin-left: 14.7rem;
-}
-
- 
-#bottom-bar .buttom-qr{
-  width: 3.75rem;
-  height: 3.75rem;
-  color: var(--background-icons);
-  border-radius: 100%;
-  background: var(--background-icons);
-  border-style: solid;
-  border-width: 0.1875rem;
-  border-color: var(--main);
-  top: 0;
-  position: fixed;
-  z-index: 0;
-  margin-top: 35.75rem;
-  margin-left: 9.375rem;
-}
-
-#bottom-bar .qr-scanner{
+  background-color: var(--main);
+  grid-template-columns: repeat(1, 22.5rem);
   position: absolute;
-  z-index: 0;
+  margin-top: 36.5rem;
+  z-index: 50;
+  margin-bottom: 1rem;
+}
+
+#icon-bar {
+  height: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 4.5rem);
+  position: absolute;
+  top: 0%;
+  margin-top: 0.5rem;
+}
+
+#bottom-bar::before {
+  content: '';
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--background-icons);
+  position: absolute;
+  border-radius: 100%;
+  margin-left: 9.2rem;
+  margin-bottom: 1rem;
+  border: thick solid var(--main);
+}
+
+#icon-bar .qr-icon {
   width: 3rem;
   height: 2.375rem;
-margin-left: 9.75rem ;
-margin-bottom: 1.5rem;
-bottom: 0%;
+  position: absolute;
+  margin-top: -0.4rem;
+  margin-left: 0.75rem;
 }
 
+.home-icon,
+.favorite-icon,
+.chat-icon,
+.profile-icon {
+  width: var(--bottom-icon-size);
+  height: var(--bottom-icon-size);
+  margin-left: 1.5rem;
+}
+
+.home-icon,
+.home-label {
+  justify-content: center;
+}
+
+.favorite-icon,
+.favorite-label {
+  justify-content: center;
+}
+
+.chat-icon,
+.chat-label {
+  justify-content: center;
+}
+
+.profile-icon,
+.profile-label {
+  justify-content: center;
+  position: relative;
+}
+*/
 
 /*===Fonts====*/
 
@@ -261,11 +240,11 @@ body {
   color: var(--background-icons);
 }
 
- .title {
+.title {
   font: 700 1.25rem 'Roboto', sans-serif;
 }
 
-  .area {
+.area {
   font: 700 1rem 'Roboto', sans-serif;
 }
 
@@ -275,44 +254,42 @@ body {
 
 #more-infos {
   font: 400 1rem 'Roboto', sans-serif;
-  font-style: italic;
+  color: red;
 }
 
 #contact {
-  font: 400 'Roboto', sans-serif;
+  font: 400 1rem 'Roboto', sans-serif;
   font-size: 1.125rem;
   color: var(--background-icons);
 }
 
-.home-text,
-.favorite-text,
-.chat-text,
-.profile-text {
+.home-label,
+.favorite-label,
+.chat-label,
+.profile-label {
   font: 400 'Roboto', sans-serif;
   font-size: 0.75rem;
   color: var(--background-icons);
   display: grid;
 }
 
-
-#modals .title{
-  margin-left:0.625rem;
+#modals .title {
+  margin-left: 0.625rem;
   max-height: 1.25rem;
-  }
+}
 
-.cod{
+.cod {
   font: 500 0.875rem 'Roboto', sans-serif;
-  color:hsl(0, 0, 67);
+  color: hsl(0, 0, 67);
   opacity: 50%;
 }
 
-#modals .area{
+#modals .area {
   font: 700 1rem 'Roboto', sans-serif;
-  margin-left:0.625rem;
-
+  margin-left: 0.625rem;
 }
 
-.contact-label{
+.contact-label {
   font: 300 'Roboto', sans-serif;
   font-size: 1.375rem;
   font-style: italic;
@@ -321,30 +298,26 @@ body {
   max-height: 1.1875rem;
 }
 
-
-
-.label-text{
+.label-text {
   font: 500 1rem 'Roboto', sans-serif;
   color: var(--main);
-  font-style:medium;
-  margin-left:0.625rem;
-
+  font-style: medium;
+  margin-left: 0.625rem;
 }
 
 .hr1 {
   border: 0;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
   height: 1px;
   margin-left: 10px;
   margin-right: 10px;
 }
 #modals .hr2 {
   border: 0;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
   height: 1px;
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
   bottom: 1.5rem;
-
 }

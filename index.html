@@ -10,125 +10,105 @@
     <!--STYLES-->
     <link rel="stylesheet" href="style.css" />
   </head>
-  
-   <!--FONTS-->
-  
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Chivo&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
+  <!--FONTS-->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chivo&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+    rel="stylesheet"
+  />
 
-  <body>
+  <body id="background">
     <header>
-      <div id="top-bar">                  
+      <div id="top-bar">
         <nav class="menu-top">
-           <a class="logo" href="#">HaveN</a>
-             <a href="#"><img class="share" src="icons/share-icon.svg" alt="icone de compartilhamento" />    </a>   
-              <nav id="overlay-share">
-                <a href=""></a>
-              </nav>
-         </nav>
-     </div>     <div id=dark-card></div> 
-
-      <a href="open-share-modal"></a>
-        <div id="open-share-modal" class="modal">
-
-        </div>
-
-                      
+          <a class="logo" href="#">HaveN</a>
+          <a href="#"
+            ><img
+              class="share"
+              src="assets/icons/share-icon.svg"
+              alt="icone de compartilhamento"
+          /></a>
+        </nav>
+      </div>
     </header>
 
+    <main>
+      <div class="dark-card">
+        <!--elemento atras do card principal-->
 
-    
-    <main id="card">   
-         <nav class="main-photo"> 
-        <img src="imgs/house1.png" alt="foto do imovel" />
-       </nav>
-    
-        <div  id="description">
+        <div class="card">
+          <img
+            class="main-photo"
+            src="/assets/imgs/house1.png"
+            alt="foto do imovel"
+          />
 
-           <h1 class="title">Casa 3 dormitórios </h1>
-           <h2 class="area">132m² </h2>
-           <p id="location" class="info-text">Santana - São Paulo/SP </p>
-           <p id="address" class="info-text">Rua Voluntários da Pátria, 452 </p>
-           <p id="garage" class="info-text">Garagem - 2 vagas </p>
-           <p id="bathrooms" class="info-text">Banheiros - 2 </p>                   
-       </div>   
+          <section id="description">
+            <h1 class="title">Casa 3 dormitórios - R$3000</h1>
+            <h2 class="area">132m²</h2>
+            <p id="location" class="info-text">Santana - São Paulo/SP</p>
+            <p id="address" class="info-text">Rua Voluntários da Pátria, 452</p>
+            <p id="garage" class="info-text">Garagem - 2 vagas</p>
+            <p id="bathrooms" class="info-text">Banheiros - 2</p>
+          </section>
 
+          <nav id="more-infos">
+            <a href="#"
+              >Mais infos<img
+                class="arrow"
+                src="assets/icons/arrow-bottom-icon.svg"
+                alt="seta para baixo"
+            /></a>
+          </nav>
 
-       <nav id ="more-infos"><a href="#">Mais infos<img class="arrow" src="icons/arrow-bottom-icon.svg" alt="seta para baixo"></a>       
-       </nav>
-
-       <a id="contact" href="#">Contatar anunciante</a>
-               
-        </nav>
-        
- 
+          <nav><a id="contact" href="#">Contatar anunciante</a></nav>
+        </div>
+      </div>
     </main>
 
-
-    
-
-            
-            
-
-  <!-- bottom bar-->
-    <footer>
-      <nav id="bottom-bar"> 
-
-
-        <div class="bottom-icon">
-          <img class ="home-icon" src="icons/home-icon2.svg" alt="icone de inicio"><a  class="home-text" href=""> Inicio </a>
+    <!-- bottom bar-->
+    <footer id="bottom-bar">
+      <div id="icon-bar">
+        <div class="home-icon">
+          <img src="assets/icons/home-icon.svg" alt="icone de inicio" /><a
+            class="home-label"
+            href=""
+          >
+            Inicio
+          </a>
         </div>
- 
-        
-        <div class="bottom-icon">        
-          <img class="favorite-icon" src="icons/favorite-icon2.svg" alt="icone de favoritos"> 
-          <a class="favorite-text" href=""> Favoritos </a>
-        
-         </div>
 
-         <div class="bottom-icon">
-          <img class="chat-icon" src="icons/chat-icon2.svg" alt="icone de chat"><a class="chat-text" href=""> Chats </a>
-         </div>
+        <div class="favorite-icon">
+          <img src="assets/icons/favorite-icon2.svg" alt="icone de favoritos" />
+          <a class="favorite-label" href=""> Favoritos </a>
+        </div>
 
-         <div class="bottom-icon">
-          <img class="profile-icon" src="icons/profile-icon.svg" alt="icone de perfil"><a class="profile-text" href="">   <i> Perfil</i></a>
-         </div>
- 
-   
-         <a class="buttom-qr" href="#"></a>
-         <img class="qr-scanner" src="icons/qr-icon.svg" alt=""> 
-         </nav>   
-         
-         
-       <section id="modals">
-         <nav class="contact-modal show">
-          <div class="open-contact">
-           <p class="contact-label">Entre em contato</p>
-           <hr class="hr1">
-           <p class="title">Casa 3 dormitórios </p>
-           <p class="area">132m² </p>        
-           <p id="phone" class="label-text">Telefone: </p>
-           <p id="mobile" class="label-text">Celular:</p>
-           <p id="commercial-address" class="label-text">Endereço: </p>
-           <p id="website" class="label-text">Site: </p>
-           <p class="label-text">Envie uma mensagem agora mesmo<p> 
-            <hr class="hr2">
-          </div>
-          
-            
-                       
-           
+        <div class="qr-background">
+          <img class="qr-icon" src="assets/icons/qr-icon.svg" alt="" /><a
+            href="#"
+          ></a>
+        </div>
 
-      <a href="#">Whatsapp <img class="whatsapp-icon" src="icons/whatsapp-icon.svg" alt=""> </a>
-      <a href="#">Telegram <img class="telegram-icon" src="icons/telegram-icon.svg" alt=""> </a>
-      <a href="#">Messenger <img class="messenger-icon" src="icons/messenger-icon.svg" alt=""> </a>
-        </section>
+        <div class="chat-icon">
+          <img src="assets/icons/chat-icon2.svg" alt="icone de chat" /><a
+            class="chat-label"
+            href=""
+          >
+            Chats
+          </a>
+        </div>
 
-
-        
+        <div class="profile-icon">
+          <img src="assets/icons/profile-icon.svg" alt="icone de perfil" /><a
+            class="profile-label"
+            href=""
+            >Perfil</a
+          >
+        </div>
+      </div>
     </footer>
   </body>
 </html>
