@@ -21,6 +21,7 @@ img {
   --main: hsla(0, 0%, 28%, 1);
   --background-icons: hsla(0, 0%, 96%, 1);
   --card: hsla(0, 0%, 98%, 1);
+  --modal: hsla(0, 0%, 96%, 1);
   --top-bar-height: 5rem;
   --bottom-bar-height: 3.5rem;
   --margin-card: 1.87rem;
@@ -65,7 +66,7 @@ img {
   /*wrapper dos cards*/
   width: 100%;
   height: 100%;
-  position: relative;
+  position: fixed;
   z-index: 0;
   z-index: 10;
 }
@@ -115,8 +116,8 @@ img {
   vertical-align: middle;
 }
 
-/*botão e modal para entrar em contato*/
-#contact {
+/*botão para entrar em contato*/
+#contact-button {
   background-color: var(--main);
   width: 12.5rem;
   height: 2.5rem;
@@ -125,35 +126,9 @@ img {
   align-items: center;
   border-radius: 0.93rem;
   position: relative;
-  margin-left: 3rem;
+  margin-left: 3.125rem;
   margin-top: 1.75rem;
 }
-
-/*
-nav .open-contact {
-  opacity: 0;
-  visibility: hidden;
-}
-
-nav .show .open-contact {
-  opacity: 1;
-  visibility: visible;
-  width: 18.875rem;
-  height: 26.75rem;
-  border-radius: 3% 3% 0 0;
-  background-color: red;
-  position: absolute;
-  margin-left: var(--margin-card);
-  z-index: 10;
-}
-
-.open-contact {
-  display: grid;
-  gap: 1rem;
-  align-content: center;
-  padding-bottom: 5rem;
-}
-*/
 
 /*=====BOTTOM-BAR=====*/
 
@@ -166,11 +141,10 @@ nav .show .open-contact {
   position: absolute;
   margin-top: 36.5rem;
   z-index: 50;
-  margin-bottom: 1rem;
 }
 
 #icon-bar {
-  height: 3.5rem;
+  height: 3rem;
   display: grid;
   grid-template-columns: repeat(5, 4.5rem);
   position: absolute;
@@ -198,39 +172,165 @@ nav .show .open-contact {
   margin-left: 0.75rem;
 }
 
-.home-icon,
-.favorite-icon,
-.chat-icon,
-.profile-icon {
+#icon-bar img {
   width: var(--bottom-icon-size);
   height: var(--bottom-icon-size);
   margin-left: 1.5rem;
 }
 
-.home-icon,
-.home-label {
+#icon-bar img,
+.bottom-icon-label {
   justify-content: center;
 }
 
-.favorite-icon,
-.favorite-label {
-  justify-content: center;
+.bottom-icon-label {
+  margin-top: -0.25rem;
 }
 
-.chat-icon,
-.chat-label {
-  justify-content: center;
+/* ======== MODALS======== */
+
+/*======CONTACT-MODAL======*/
+
+#modals {
+  position: absolute;
+  bottom: 0%;
 }
 
-.profile-icon,
-.profile-label {
+nav.open-contact {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav.show .open-contact {
+  background-color: var(--modal);
+  opacity: 1;
+  visibility: hidden;
+  width: 18.75rem;
+  max-height: 26.75rem;
+  border-radius: 4% 4% 0 0;
+  margin-left: var(--margin-card);
+  margin-right: var(--margin-card);
+  position: relative;
+  z-index: 0;
+}
+
+.divider-contact-1 {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 1px;
+}
+.divider-contact-2 {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 1px;
+  margin-top: -0.3125rem;
+}
+
+#modals .contact-infos {
+  display: grid;
+  gap: 0.5rem;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+
+#modals .contact-icons {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 6.25rem);
+  height: 6.75rem;
+  position: relative;
+  margin-top: 0.9375rem;
+}
+
+#modals .contact-icons img,
+.contact-icon-label {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
   justify-content: center;
+  margin-top: 0.3125rem;
+}
+
+#modals .contact-whatsapp-icon {
+  margin-left: 1rem;
+}
+
+#modals .contact-messenger-icon {
+  margin-right: 1.125rem;
+}
+
+#modals .contact-icon-label {
+  margin-top: 0.18rem;
+}
+
+/*======SHARE-MODAL======*/
+
+nav.open-share {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav.show .open-share {
+  background-color: var(--modal);
+  opacity: 1;
+  visibility: hidden;
+  width: 18.75rem;
+  height: 12.75rem;
+  border-radius: 4% 4% 0 0;
+  margin-left: var(--margin-card);
+  margin-right: var(--margin-card);
+  position: absolute;
+  bottom: 0%;
+}
+
+.divider-share {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 1px;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  margin-top: 0.5rem;
+}
+
+#share-label .share-icons {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 6.25rem);
+  grid-template-rows: repeat(2, 4.875rem);
   position: relative;
 }
-*/
+
+#share-label .share-icons img,
+.share-icon-label {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  display: grid;
+  justify-content: center;
+}
+
+#share-label .share-icon-label {
+  margin-top: 0.2rem;
+}
+
+#share-label .whatsapp-icon,
+.telegram-icon,
+.messenger-icon {
+  margin-top: 0.3125rem;
+}
+#share-label .messenger-icon,
+.copy-url-icon {
+  margin-right: 0.8375rem;
+}
+
+#share-label .whatsapp-icon,
+.facebook-icon {
+  margin-left: 0.8375rem;
+}
 
 /*===Fonts====*/
 
+/*==TOP E CARD==*/
 body {
   font: 400 1rem 'Roboto', sans-serif;
 }
@@ -240,7 +340,8 @@ body {
   color: var(--background-icons);
 }
 
-.title {
+.card-title {
+  /*titulo do card*/
   font: 700 1.25rem 'Roboto', sans-serif;
 }
 
@@ -249,75 +350,89 @@ body {
 }
 
 .info-text {
+  /*informações do card*/
   font: 400 1rem 'Roboto', sans-serif;
 }
 
 #more-infos {
   font: 400 1rem 'Roboto', sans-serif;
-  color: red;
+  color: var(--main);
+  text-decoration: none;
 }
 
-#contact {
+#contact-button {
+  /*botão entrar em contato*/
   font: 400 1rem 'Roboto', sans-serif;
   font-size: 1.125rem;
   color: var(--background-icons);
 }
 
-.home-label,
-.favorite-label,
-.chat-label,
-.profile-label {
+.bottom-icon-label {
+  /*label icones bottom-bar*/
   font: 400 'Roboto', sans-serif;
   font-size: 0.75rem;
   color: var(--background-icons);
   display: grid;
 }
 
-#modals .title {
-  margin-left: 0.625rem;
-  max-height: 1.25rem;
-}
+/*======MODALS======*/
 
-.cod {
-  font: 500 0.875rem 'Roboto', sans-serif;
-  color: hsl(0, 0, 67);
-  opacity: 50%;
-}
-
-#modals .area {
-  font: 700 1rem 'Roboto', sans-serif;
-  margin-left: 0.625rem;
-}
-
-.contact-label {
+.contact-title {
+  /*titulo modal contact*/
   font: 300 'Roboto', sans-serif;
   font-size: 1.375rem;
   font-style: italic;
   color: var(--main);
-  margin-left: 1.875rem;
-  max-height: 1.1875rem;
+  margin-left: 1.25rem;
+  margin-top: 0.9375rem;
 }
 
-.label-text {
+#modals .seller-name {
+  /*nome do anunciante*/
+  font: 700 1.25rem 'Roboto', sans-serif;
+  margin-top: 0.5rem;
+}
+
+#modals .cod {
+  font: 400 1rem 'Roboto', sans-serif;
+  color: rgba(151, 151, 151, 1);
+  font-style: medium;
+}
+
+#modals .label-text {
+  /*label infos do contact-modal*/
   font: 500 1rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: medium;
-  margin-left: 0.625rem;
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.9375rem;
 }
 
-.hr1 {
-  border: 0;
-  border-top: 1px solid #ccc;
-  height: 1px;
-  margin-left: 10px;
-  margin-right: 10px;
+.send-a-message {
+  font: 500 1rem 'Roboto', sans-serif;
+  color: var(--main);
+  font-style: medium;
+  margin-top: 1.3125rem;
 }
-#modals .hr2 {
-  border: 0;
-  border-top: 1px solid #ccc;
-  height: 1px;
-  margin-left: 10px;
-  margin-right: 10px;
-  position: relative;
-  bottom: 1.5rem;
+
+.contact-icon-label {
+  /*labels icones contact*/
+  font: 400 0.625rem 'Roboto', sans-serif;
+  color: var(--main);
+}
+
+.share-icon-label {
+  /*labels icones share*/
+  font: 400 0.625rem 'Roboto', sans-serif;
+  color: var(--main);
+}
+
+.share-this {
+  /*titulo modal share*/
+  font: 300 1.25rem 'Roboto', sans-serif;
+  color: var(--main);
+  font-style: italic;
+  margin-top: 0.9375rem;
+  margin-left: 1.875rem;
 }
