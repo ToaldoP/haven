@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Versão development jQuery -->
+<script type="text/javascript" src="jquery.js"></script>
+
     <title>HaveN</title>
 
     <!--STYLES-->
@@ -25,12 +29,8 @@
       <div id="top-bar">
         <nav class="menu-top">
           <a class="logo" href="#">HaveN</a>
-          <a href="#"
-            ><img
-              class="share"
-              src="assets/icons/share-icon.svg"
-              alt="icone de compartilhamento"
-          /></a>
+          <img id="open-share-modal" src="assets/icons/share-icon.svg" alt="icone de compartilhamento"
+          /></nav>
         </nav>
       </div>
     </header>
@@ -69,51 +69,28 @@
       </div>
     </main>
 
+    
     <!-- bottom bar-->
-    <footer id="bottom-bar">
-      <div id="icon-bar">
-        <div class="home-icon">
-          <img src="assets/icons/home-icon2.svg" alt="icone de inicio" />
-          <a class="bottom-icon-label"href="">Inicio</a>
-        </div>
+    <footer">
+      <div id="navbar"></div>
+      <script type="text/javascript">
+        $(document).ready(function() {
+        $('#navbar').load('navbar.html');
+        });
+        </script>
 
-        <div class="favorite-icon">
-          <img src="assets/icons/favorite-icon2.svg" alt="icone de favoritos" />
-          <a class="bottom-icon-label" href="">Favoritos</a>
-        </div>
-
-        <div class="qr-background">
-          <img class="qr-icon" src="assets/icons/qr-icon.svg" alt="" /><a
-            href="#"></a>
-        </div>
-
-        <div class="chat-icon">
-          <img src="assets/icons/chat-icon2.svg" alt="icone de chat" /><a
-            class="bottom-icon-label"
-            href=""
-          >
-            Chats
-          </a>
-        </div>
-
-        <div class="profile-icon">
-          <img src="assets/icons/profile-icon.svg" alt="icone de perfil" /><a
-            class="bottom-icon-label"
-            href=""
-            >Perfil</a
-          >
-        </div>
-      </div>
-
+        
         <!--======MODALS=======-->
      
-         <section id="modals">
+         <section id="modals" >
 
         <!--=====CONTACT MODAL=====-->
+       <div id="contact-modal-main">
         <nav class="contact-modal show">
-
           <div class="open-contact">
-             <div class="contact-infos">
+            
+
+               <div class="contact-infos">
                   <p class="contact-title">Entre em contato</p>
                   <hr class="divider-contact-1">
                    <span class="seller-name">Imobiliária Avante </span>
@@ -126,57 +103,68 @@
                     <span class="website">Site: <a href="#">www.imobiliariaavante.com.br</a></span>
                     <p class="send-a-message">Envie uma mensagem agora mesmo </p> 
                       <hr class="divider-contact-2">
-                 </div>
-            </div>
+                  </div>
+                </div>
 
-                <div class="contact-icons">
+               <div class="contact-icons">
                      
                         <div class="contact-whatsapp-icon">
-                          <img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp"><a class="contact-icon-label" href="#">WhatsApp</a>
+                          <a href="#"><img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp">
+                            <p class="contact-icon-label">WhatsApp</p></a>
                         </div>
                         <div class="contact-telegram-icon" >
-                          <img src="/assets/icons/telegram-icon.svg" alt=""><a class="contact-icon-label" href="#">Telegram</a>
+                          <a href="#"><img src="/assets/icons/telegram-icon.svg" alt="">
+                            <p class="contact-icon-label">Telegram</p></a>
                        </div>
                         <div class="contact-messenger-icon" >
-                        <img src="/assets/icons/messenger-icon.svg" alt=""><a class="contact-icon-label" href="#">Messenger</a>
+                          <a href="#"><img src="/assets/icons/messenger-icon.svg" alt="">
+                        <p class="contact-icon-label" href="#">Messenger</p></a>
                       </div>
-                </div>         
+                </div>   
+
+            </div>         
           </div>            
         </nav>
 
         <!--=====SHARE MODAL=======-->
-
-        <nav class="share-modal show">
-          <div class="open-share">
-          
-           <div id="share-label">
-             <p class="share-this">Compartilhar este anúncio</p>
-             <hr class="divider-share">
+      <div id="share-modal-main">
+        <nav class="share-modal">
+         
+     
+             <div id="share-label">
+               <p class="share-this">Compartilhar este anúncio</p>
+                <hr class="divider-share">
           
            <div class="share-icons"> 
           
               <div class="whatsapp-icon">
-                <img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp"><a class="share-icon-label" href="#">WhatsApp</a>
+               <a href="#"> <img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp">
+                <p class="share-icon-label">WhatsApp</p></a>
               </div>
 
               <div class="telegram-icon" >
-                <img src="/assets/icons/telegram-icon.svg" alt="icone do telegram"><a class="share-icon-label" href="#">Telegram</a>
+                <a href="#"><img src="/assets/icons/telegram-icon.svg" alt="icone do telegram">
+                  <p class="share-icon-label">Telegram</p></a>
              </div>
 
               <div class="messenger-icon" >
-              <img src="/assets/icons/messenger-icon.svg" alt="icode do messenger"><a class="share-icon-label" href="#">Messenger</a>
+              <a href="#"><img src="/assets/icons/messenger-icon.svg" alt="icode do messenger">
+                <p class="share-icon-label">Messenger</p></a>
             </div>
 
               <div class="facebook-icon">
-              <img src="/assets/icons/facebook-icon.svg" alt="icone do facebook"><a class="share-icon-label" href="#">Facebook</a>
+              <a href="#"><img src="/assets/icons/facebook-icon.svg" alt="icone do facebook">
+                <p class="share-icon-label">Facebook</p></a>
               </div>
              
               <div class="email-icon">
-               <img src="/assets/icons/email-icon.svg" alt="icone de email"><a class="share-icon-label" href="#">e-mail</a>
+               <a href="#"><img src="/assets/icons/email-icon.svg" alt="icone de email">
+                <p class="share-icon-label"">e-mail</p></a>
               </div>
 
               <div class="copy-url-icon">
-                <img src="/assets/icons/copy-url.svg" alt="icone de copiar url"><a class="share-icon-label" href="#">copiar&nbsp;url</a>
+                <a href="#"><img src="/assets/icons/copy-url.svg" alt="icone de copiar url">
+                  <p class="share-icon-label">copiar&nbsp;url</p></a>
               </div>
              
 
@@ -185,9 +173,14 @@
 
 
 
+           
+           
+           
+           
+             </div>
             </div>
-            </div>
-           </div>
+         
+          </div>
         </nav>
 
 
@@ -197,4 +190,5 @@
  
     </footer>
   </body>
+  <script src="main.js"></script>
 </html>
