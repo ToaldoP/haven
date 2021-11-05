@@ -24,7 +24,7 @@
     rel="stylesheet"
   />
 
-  <body id="background">
+  <body>
     <header>
       <div id="top-bar">
         <nav class="menu-top">
@@ -34,17 +34,20 @@
         </nav>
       </div>
     </header>
-
-    <main>
+ 
+    <main id="card-wrapper"> <!--elemento atras do card principal-->
       <div class="dark-card">
-        <!--elemento atras do card principal-->
+       
 
         <div class="card">
-          <img
-            class="main-photo"
-            src="/assets/imgs/house1.png"
-            alt="foto do imovel"
-          />
+
+           <div class="main-photo">
+              <img src="/assets/imgs/house1.png" alt="foto do imovel" />
+
+              <nav class="favorite-button"> <img class="favorite-button-icon"
+                    src="/assets/icons/favorite-button-icon.svg" alt=""></nav>
+           </div>
+
 
           <section id="description">
             <h1 class="card-title">Casa 3 dormitórios - R$3000</h1>
@@ -62,11 +65,16 @@
                 src="assets/icons/arrow-bottom-icon.svg"
                 alt="seta para baixo"
             /></a>
-          </nav>
-
-          <nav><a id="contact-button" href="#">Contatar anunciante</a></nav>
-        </div>
+          </nav>   
+        </div> 
       </div>
+
+
+
+      <nav class="contact-button"><a  href="#">Contatar anunciante</a></nav>
+
+
+
     </main>
 
     
@@ -79,114 +87,121 @@
         });
         </script>
 
+
+
+    <!--=====MODALS=======-->
+    <section id="modals" >
+
+      <!--=====CONTACT MODAL=====-->
+     <div id="contact-modal-main">
+      <nav class="contact-modal show">
+        <div class="open-contact">
+          
+
+             <div class="contact-infos">
+                <p class="contact-title">Entre em contato</p>
+                <hr class="divider-contact-1">
+                 <span class="seller-name">Imobiliária Avante </span>
+                  <span class="cod"> cod. EDS4575 </span> 
+
+                <div class="label-text">
+                  <span class="phone">Telefone: (99) 9 999-9999 </span>
+                  <span class="mobile">Celular: (00) 1 234-5678</span>
+                  <span class="commercial-address">Endereço: Av. Bras Leme, 1575 </span>
+                  <span class="website">Site: <a href="#">www.imobiliariaavante.com.br</a></span>
+                  <p class="send-a-message">Envie uma mensagem agora mesmo </p> 
+                    <hr class="divider-contact-2">
+                </div>
+              </div>
+
+             <div class="contact-icons">
+                   
+                      <div class="contact-whatsapp-icon">
+                        <a href="#"><img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp">
+                          <p class="contact-icon-label">WhatsApp</p></a>
+                      </div>
+                      <div class="contact-telegram-icon" >
+                        <a href="#"><img src="/assets/icons/telegram-icon.svg" alt="">
+                          <p class="contact-icon-label">Telegram</p></a>
+                     </div>
+                      <div class="contact-messenger-icon" >
+                        <a href="#"><img src="/assets/icons/messenger-icon.svg" alt="">
+                      <p class="contact-icon-label" href="#">Messenger</p></a>
+                    </div>
+              </div>   
+
+          </div>         
+        </div>            
+      </nav>
+
+      <!--=====SHARE MODAL=======-->
+    <div id="share-modal-main">
+      <nav class="share-modal">
+       
+   
+           <div id="share-label">
+             <p class="share-this">Compartilhar este anúncio</p>
+              <hr class="divider-share">
+        
+         <div class="share-icons"> 
+        
+            <div class="whatsapp-icon">
+             <a href="#"> <img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp">
+              <p class="share-icon-label">WhatsApp</p></a>
+            </div>
+
+            <div class="telegram-icon" >
+              <a href="#"><img src="/assets/icons/telegram-icon.svg" alt="icone do telegram">
+                <p class="share-icon-label">Telegram</p></a>
+           </div>
+
+            <div class="messenger-icon" >
+            <a href="#"><img src="/assets/icons/messenger-icon.svg" alt="icode do messenger">
+              <p class="share-icon-label">Messenger</p></a>
+          </div>
+
+            <div class="facebook-icon">
+            <a href="#"><img src="/assets/icons/facebook-icon.svg" alt="icone do facebook">
+              <p class="share-icon-label">Facebook</p></a>
+            </div>
+           
+            <div class="email-icon">
+             <a href="#"><img src="/assets/icons/email-icon.svg" alt="icone de email">
+              <p class="share-icon-label"">e-mail</p></a>
+            </div>
+
+            <div class="copy-url-icon">
+              <a href="#"><img src="/assets/icons/copy-url.svg" alt="icone de copiar url">
+                <p class="share-icon-label">copiar&nbsp;url</p></a>
+            </div>
+           
+
+
+
+
+
+
+         
+         
+         
+         
+           </div>
+          </div>
+       
+        </div>
+      </nav>
+
+
+
+
+    </section>
+
+
+
         
         <!--======MODALS=======-->
      
-         <section id="modals" >
-
-        <!--=====CONTACT MODAL=====-->
-       <div id="contact-modal-main">
-        <nav class="contact-modal show">
-          <div class="open-contact">
-            
-
-               <div class="contact-infos">
-                  <p class="contact-title">Entre em contato</p>
-                  <hr class="divider-contact-1">
-                   <span class="seller-name">Imobiliária Avante </span>
-                    <span class="cod"> cod. EDS4575 </span> 
-
-                  <div class="label-text">
-                    <span class="phone">Telefone: (99) 9 999-9999 </span>
-                    <span class="mobile">Celular: (00) 1 234-5678</span>
-                    <span class="commercial-address">Endereço: Av. Bras Leme, 1575 </span>
-                    <span class="website">Site: <a href="#">www.imobiliariaavante.com.br</a></span>
-                    <p class="send-a-message">Envie uma mensagem agora mesmo </p> 
-                      <hr class="divider-contact-2">
-                  </div>
-                </div>
-
-               <div class="contact-icons">
-                     
-                        <div class="contact-whatsapp-icon">
-                          <a href="#"><img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp">
-                            <p class="contact-icon-label">WhatsApp</p></a>
-                        </div>
-                        <div class="contact-telegram-icon" >
-                          <a href="#"><img src="/assets/icons/telegram-icon.svg" alt="">
-                            <p class="contact-icon-label">Telegram</p></a>
-                       </div>
-                        <div class="contact-messenger-icon" >
-                          <a href="#"><img src="/assets/icons/messenger-icon.svg" alt="">
-                        <p class="contact-icon-label" href="#">Messenger</p></a>
-                      </div>
-                </div>   
-
-            </div>         
-          </div>            
-        </nav>
-
-        <!--=====SHARE MODAL=======-->
-      <div id="share-modal-main">
-        <nav class="share-modal">
-         
-     
-             <div id="share-label">
-               <p class="share-this">Compartilhar este anúncio</p>
-                <hr class="divider-share">
-          
-           <div class="share-icons"> 
-          
-              <div class="whatsapp-icon">
-               <a href="#"> <img  src="/assets/icons/whatsapp-icon.svg" alt="icone whatsapp">
-                <p class="share-icon-label">WhatsApp</p></a>
-              </div>
-
-              <div class="telegram-icon" >
-                <a href="#"><img src="/assets/icons/telegram-icon.svg" alt="icone do telegram">
-                  <p class="share-icon-label">Telegram</p></a>
-             </div>
-
-              <div class="messenger-icon" >
-              <a href="#"><img src="/assets/icons/messenger-icon.svg" alt="icode do messenger">
-                <p class="share-icon-label">Messenger</p></a>
-            </div>
-
-              <div class="facebook-icon">
-              <a href="#"><img src="/assets/icons/facebook-icon.svg" alt="icone do facebook">
-                <p class="share-icon-label">Facebook</p></a>
-              </div>
-             
-              <div class="email-icon">
-               <a href="#"><img src="/assets/icons/email-icon.svg" alt="icone de email">
-                <p class="share-icon-label"">e-mail</p></a>
-              </div>
-
-              <div class="copy-url-icon">
-                <a href="#"><img src="/assets/icons/copy-url.svg" alt="icone de copiar url">
-                  <p class="share-icon-label">copiar&nbsp;url</p></a>
-              </div>
-             
-
-
-
-
-
-
-           
-           
-           
-           
-             </div>
-            </div>
-         
-          </div>
-        </nav>
-
-
-
-
-      </section>
+      
  
     </footer>
   </body>

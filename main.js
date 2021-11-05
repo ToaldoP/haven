@@ -6,10 +6,12 @@ shareButton.addEventListener('click', function () {
 })
 
 document.addEventListener('click', function (event) {
-  if (event.target.closest('.share-modal')) {
+  if (!event.target.closest('.share-modal')) {
     closeShareModal()
   }
-})
+},
+false
+)
 
 function closeShareModal() {
   document.querySelector('.share-modal').style.visibility = 'hidden'
