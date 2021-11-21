@@ -36,7 +36,7 @@
       <div class="dark-card">
        
 
-        <div class="card">
+        <section class="card">
 
            <div class="main-photo">
               <img src="/assets/imgs/house1.jpg" alt="foto do imovel" />
@@ -49,10 +49,10 @@
           <section id="description">
             <h1 class="card-title">Casa 3 dormitórios - R$3000</h1>
             <h2 class="area">132m²</h2>
-            <p id="location" class="info-text">Santana - São Paulo/SP</p>
-            <p id="address" class="info-text">Rua Voluntários da Pátria, 452</p>
-            <p id="garage" class="info-text">Garagem - 2 vagas</p>
-            <p id="bathrooms" class="info-text">Banheiros - 2</p>
+            <p id="adress" class="info-text">Rua Voluntários da Pátria, 452</p>
+            <p id="rooms" class="info-text">Dormitórios: 3</p>
+            <p id="bathrooms" class="info-text">Banheiros: 2</p>
+            <p id="garage" class="info-text">Garagem: 2</p>
           </section>
 
           <nav id="more-infos">
@@ -63,12 +63,12 @@
                 alt="seta para baixo"
             /></a>
           </nav>   
-        </div> 
+        </section> 
       </div>
 
 
 
-      <nav class="contact-button"><a  href="#">Contatar anunciante</a></nav>
+      <button id="contact-button"><a  href="#">Contatar anunciante</a></button>
 
 
 
@@ -77,6 +77,7 @@
     
     <!-- bottom bar-->
     <footer">
+    
       <div id="navbar"></div>
       <script type="text/javascript">
         $(document).ready(function() {
@@ -87,14 +88,13 @@
 
 
     <!--=====MODALS=======-->
+    <div class="modal-overlay">  </div>
     <section id="modals" >
-
+    
       <!--=====CONTACT MODAL=====-->
-     <div id="contact-modal-main">
-      <nav class="contact-modal show">
-        <div class="open-contact">
-          
-
+     <section id="contact-modal-main">
+      <div id="contact-modal">
+            
              <div class="contact-infos">
                 <p class="contact-title">Entre em contato</p>
                 <hr class="divider-contact-1">
@@ -127,13 +127,16 @@
                     </div>
               </div>   
 
-          </div>         
-        </div>            
-      </nav>
+    
+              
+      </div>             
+    </section>
+ 
 
       <!--=====SHARE MODAL=======-->
-    <div id="share-modal-main">
-      <nav class="share-modal">
+    <section id="share-modal-main">
+      <nav id="share-modal">
+       
        
    
            <div id="share-label">
@@ -170,33 +173,21 @@
             <div class="copy-url-icon">
               <a href="#"><img src="/assets/icons/copy-url.svg" alt="icone de copiar url">
                 <p class="share-icon-label">copiar&nbsp;url</p></a>
-            </div>
-           
-
-
-
-
-
-
-         
-         
-         
-         
+            </div>              
            </div>
           </div>
-       
-        </div>
-      </nav>
+        </nav>
+      </section>
+     
 
 
-
+    
 
     </section>
 
 
 
         
-        <!--======MODALS=======-->
      
       
  
