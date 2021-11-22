@@ -65,3 +65,26 @@ document.addEventListener('click', function (event) {
     closeShareModal()
   }
 })
+
+/*OPEN AND CLOSE SHARE MODAL*/
+const moreInfosButton = document.querySelector('#more-infos')
+const moreInfosModal = document.querySelector('.infos-full')
+
+moreInfosButton.addEventListener('click', openInfosModal)
+
+function openInfosModal(event) {
+  moreInfosModal.classList.add('show')
+  modalOverlay.classList.add('show')
+  event.stopImmediatePropagation()
+}
+
+function closeMoreInfosModal() {
+  moreInfosModal.classList.remove('show')
+}
+
+document.addEventListener('click', function (event) {
+  let clickOutside = !moreInfosModal.contains(event.target)
+  if (clickOutside) {
+    closeMoreInfosModal()
+  }
+})

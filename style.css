@@ -95,7 +95,7 @@ img {
   z-index: 0;
   background-color: var(--card);
   top: calc(var(--top-bar-height) + 1.125rem); /*se afasta do top*/
-  border-radius: 40% 40% 0 0;
+  border-radius: 5% 5% 0 0;
   transform: translateX(0%);
 }
 
@@ -131,7 +131,7 @@ img {
 }
 
 /* descrição do anuncio versão resumida */
-#description {
+.description {
   margin-top: 0.9375rem;
   display: grid;
   gap: 0.5rem;
@@ -161,7 +161,10 @@ img {
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
 }
+
 
 /* ======== MODALS======== */
 
@@ -181,7 +184,7 @@ img {
   background-color:rgba(0, 0, 0, .6);
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: fixed;
   z-index: 100;
   visibility: hidden;
   opacity: 0;
@@ -198,7 +201,7 @@ img {
   visibility: hidden;
   width: 18.75rem;
   height: 26.625rem;
-  border-radius: 4% 4% 0 0;
+  border-radius: 5% 5% 0 0;
   position: fixed;
   bottom: 0% ;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -274,7 +277,7 @@ img {
   background-color: var(--modal);
   width: 18.75rem;
   height: 12.75rem;
-  border-radius: 4% 4% 0 0;
+  border-radius: 5% 5% 0 0;
   position: relative;
   padding-top: 0.9375rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -333,6 +336,31 @@ img {
 #share-modal-main .whatsapp-icon,
 .facebook-icon {
   margin-left: 0.8375rem;
+}
+
+
+/*======MORE-INFOS-MODAL======*/
+
+
+.infos-full {
+  background-color:var(--card);
+  visibility: visible;
+  width: 18.75rem;
+  height: 100%;
+  top: calc(var(--top-bar-height) ); /*se afasta do top*/
+  border-radius: 0.9375rem;
+  position: fixed;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  display: grid;
+  gap: 1rem;
+  transition: 0.1s;
+  transform: translateY(100%);
+}
+
+.infos-full.show{
+  visibility: visible;
+  transform: translateY(0%);
 }
 
 
@@ -404,19 +432,20 @@ img {
   text-align: left;
 }
 
-.card-title {
+.description .card-title {
   /*titulo do card*/
   font: 700 1.25rem 'Roboto', sans-serif;
 }
 
-.area {
+.description .area {
   font: 700 1rem 'Roboto', sans-serif;
 }
 
-.info-text {
+.description .info-text {
   /*informações do card*/
   font: 400 1rem 'Roboto', sans-serif;
 }
+
 
 #more-infos a {
   font: 400 1rem 'Roboto', sans-serif;
@@ -441,8 +470,7 @@ img {
 
 /*======MODALS======*/
 
-.contact-title {
-  /*titulo modal contact*/
+.contact-title {  /*titulo modal contact*/
   font: 300 1rem'Roboto', sans-serif;
   font-size: 1.375rem;
   font-style: italic;
@@ -451,20 +479,19 @@ img {
   margin-top: 0.9375rem;
 }
 
-#modals .seller-name {
-  /*nome do anunciante*/
+#modals .seller-name {  /*nome do anunciante*/
   font: 700 1.25rem 'Roboto', sans-serif;
   margin-top: 0.5rem;
 }
 
-#modals .cod {
+#modals .cod {  /*codigo do anuncio*/
   font: 400 1rem 'Roboto', sans-serif;
   color: rgba(151, 151, 151, 1);
   font-style: medium;
+  text-decoration: underline;
 }
 
-#modals .label-text {
-  /*label infos do contact-modal*/
+#modals .label-text {   /*label infos do contact-modal*/
   font: 500 1rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: medium;
@@ -473,30 +500,44 @@ img {
   gap: 0.9375rem;
 }
 
-.send-a-message {
+.send-a-message {   /*label envie mensage do contact-modal*/
   font: 500 1rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: medium;
   margin-top: 1.3125rem;
 }
 
-.contact-icon-label {
-  /*labels icones contact*/
+.contact-icon-label {   /*labels icones contact*/
   font: 400 0.625rem 'Roboto', sans-serif;
   color: var(--main);
 }
 
-.share-icon-label {
-  /*labels icones share*/
+.share-icon-label {   /*labels icones share*/
   font: 400 0.625rem 'Roboto', sans-serif;
   color: var(--main);
 }
 
-.share-this {
-  /*titulo modal share*/
+.share-this {   /*titulo modal share*/
   font: 300 1.25rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: italic;
   margin-left: 1.875rem;
 
+}
+
+
+.infos-full .card-title {   /*titulo anuncio modal mais infos */
+  font: 700 1.25rem 'Roboto', sans-serif;
+  margin-left: 0.625rem;
+  margin-top: 0.9375rem;
+}
+
+.infos-full .area  {  /*area anuncio modal mais infos */
+  font: 700 1rem 'Roboto', sans-serif;
+  margin-left: 0.625rem;
+}
+
+.infos-full .info-text {  /*descrição modal mais infos */
+  font: 400 1rem 'Roboto', sans-serif;
+  margin-left: 0.625rem;
 }
