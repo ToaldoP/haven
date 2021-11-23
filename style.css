@@ -31,8 +31,6 @@ img {
 
 /*cria top-bar e posiciona*/
 
-
-
 #top-bar {
   width: 100%;
   height: var(--top-bar-height);
@@ -81,7 +79,7 @@ img {
   height: 45vh;
   max-height: 18em;
   position: absolute;
-  background:var(--main);
+  background: var(--main);
   z-index: 0;
   left: 0%;
   border-radius: 0% 0% 50% 50% / 0% 0% 7% 7%;
@@ -119,15 +117,13 @@ img {
   max-height: 1.375rem;
 }
 
-.main-photo{
+.main-photo {
   height: 34.689vh;
 }
 
 .card .main-photo img {
   border-radius: 5%;
   height: 34.689vh;
- 
-
 }
 
 /* descrição do anuncio versão resumida */
@@ -165,23 +161,23 @@ img {
   outline: none;
 }
 
-
 /* ======== MODALS======== */
 
 /*======CONTACT-MODAL======*/
 
 #modals {
   display: grid;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
-  justify-content: center;
   bottom: 0%;
-  left: 50%;
-  right: 50%;
+  width: 83.33vw;
+  margin-left: 8.335%;
+  margin-right: 8.335%;
+  visibility: hidden;
 }
 
-.modal-overlay{
-  background-color:rgba(0, 0, 0, .6);
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -190,31 +186,30 @@ img {
   opacity: 0;
 }
 
-.modal-overlay.show{
+.modal-overlay.show {
   visibility: visible;
   opacity: 1;
 }
 
-
 #contact-modal {
   background-color: var(--modal);
   visibility: hidden;
-  width: 18.75rem;
-  height: 26.625rem;
+  width: 83.33vw;
+  height: 66.41vh;
+  max-height: 28rem;
   border-radius: 5% 5% 0 0;
-  position: fixed;
-  bottom: 0% ;
+  position: absolute;
+  z-index: 130;
+  bottom: 0%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(100%);
   transition: 0.1s;
 }
 
-#contact-modal.show{
+#contact-modal.show {
   transform: translateY(0%);
   visibility: visible;
 }
-
-
 
 .divider-contact-1 {
   border: 0;
@@ -238,10 +233,10 @@ img {
 #contact-modal-main .contact-icons {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(3, 6.25rem);
-  height: 6.75rem;
+  grid-template-columns: repeat(3, 33.33%);
+  height: 16.41vh;
   position: relative;
-  margin-top: 0.9375rem;
+  margin-top: 0.8125rem;
 }
 
 #contact-modal-main .contact-icons img,
@@ -254,43 +249,43 @@ img {
 }
 
 #contact-modal-main .contact-whatsapp-icon {
-  margin-left: 1rem;
+  margin-left: 7vw;
 }
 
 #contact-modal-main .contact-messenger-icon {
-  margin-right: 1.125rem;
+  margin-right: 7vw;
 }
 
 #contact-modal-main .contact-icon-label {
   margin-top: 0.18rem;
-  height: 1rem;
 }
 
 /*======SHARE-MODAL======*/
 
-#share-modal-main{
+#share-modal-main {
   visibility: hidden;
 }
 
 #share-modal {
   visibility: hidden;
   background-color: var(--modal);
-  width: 18.75rem;
-  height: 12.75rem;
+  width: 83.33vw;
+  height: 31.875vh;
+  min-height: 12.75rem;
+  max-height: 14rem;
   border-radius: 5% 5% 0 0;
-  position: relative;
+  position: absolute;
   padding-top: 0.9375rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(100%);
   transition: 0.1s;
- 
+  bottom: 0;
 }
 
-#share-modal.show{
+#share-modal.show {
   transform: translateY(0%);
   visibility: visible;
 }
-
 
 .divider-share {
   border: 0;
@@ -304,7 +299,7 @@ img {
 #share-modal-main .share-icons {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(3, 6.25rem);
+  grid-template-columns: repeat(3, 33.33%);
   grid-template-rows: repeat(2, 4.875rem);
   position: relative;
 }
@@ -330,42 +325,48 @@ img {
 }
 #share-modal-main .messenger-icon,
 .copy-url-icon {
-  margin-right: 0.8375rem;
+  margin-right: 4.33vw;
 }
 
 #share-modal-main .whatsapp-icon,
 .facebook-icon {
-  margin-left: 0.8375rem;
+  margin-left: 4.33vw;
 }
-
 
 /*======MORE-INFOS-MODAL======*/
 
-
-.infos-full {
-  background-color:var(--card);
-  visibility: visible;
-  width: 18.75rem;
-  height: 100%;
-  top: calc(var(--top-bar-height) ); /*se afasta do top*/
-  border-radius: 0.9375rem;
-  position: fixed;
+#more-infos-modal {
+  background-color: var(--card);
+  visibility: hidden;
+  width: 83.33vw;
+  height: calc(100vh - var(--top-bar-height));
+  border-radius: 0.9375rem 0.9375rem 0 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  overflow-y: auto;
-  display: grid;
-  gap: 1rem;
   transition: 0.1s;
+  overflow-y: auto;
+  bottom: 0%;
   transform: translateY(100%);
+  position: absolute;
 }
 
-.infos-full.show{
+#more-infos-modal.show {
   visibility: visible;
   transform: translateY(0%);
 }
 
+.description.infos-full {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 
+.infos-divider {
+  background-color: white;
+  height: 2rem;
+}
 
-
+.condominium.description.infos-full {
+}
 
 /*=====BOTTOM-BAR=====*/
 
@@ -435,22 +436,25 @@ img {
 .description .card-title {
   /*titulo do card*/
   font: 700 1.25rem 'Roboto', sans-serif;
+  margin-left: 0.625rem;
 }
 
 .description .area {
   font: 700 1rem 'Roboto', sans-serif;
+  margin-left: 0.625rem;
 }
 
 .description .info-text {
   /*informações do card*/
   font: 400 1rem 'Roboto', sans-serif;
+  margin-left: 0.625rem;
 }
-
 
 #more-infos a {
   font: 400 1rem 'Roboto', sans-serif;
   color: var(--main);
   text-decoration: none;
+  margin-left: 0.625rem;
 }
 
 #contact-button a {
@@ -470,8 +474,9 @@ img {
 
 /*======MODALS======*/
 
-.contact-title {  /*titulo modal contact*/
-  font: 300 1rem'Roboto', sans-serif;
+.contact-title {
+  /*titulo modal contact*/
+  font: 300 1rem 'Roboto', sans-serif;
   font-size: 1.375rem;
   font-style: italic;
   color: var(--main);
@@ -479,19 +484,22 @@ img {
   margin-top: 0.9375rem;
 }
 
-#modals .seller-name {  /*nome do anunciante*/
+#modals .seller-name {
+  /*nome do anunciante*/
   font: 700 1.25rem 'Roboto', sans-serif;
   margin-top: 0.5rem;
 }
 
-#modals .cod {  /*codigo do anuncio*/
+#modals .cod {
+  /*codigo do anuncio*/
   font: 400 1rem 'Roboto', sans-serif;
   color: rgba(151, 151, 151, 1);
   font-style: medium;
   text-decoration: underline;
 }
 
-#modals .label-text {   /*label infos do contact-modal*/
+#modals .label-text {
+  /*label infos do contact-modal*/
   font: 500 1rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: medium;
@@ -500,44 +508,51 @@ img {
   gap: 0.9375rem;
 }
 
-.send-a-message {   /*label envie mensage do contact-modal*/
+.send-a-message {
+  /*label envie mensage do contact-modal*/
   font: 500 1rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: medium;
   margin-top: 1.3125rem;
 }
 
-.contact-icon-label {   /*labels icones contact*/
+.contact-icon-label {
+  /*labels icones contact*/
   font: 400 0.625rem 'Roboto', sans-serif;
   color: var(--main);
 }
 
-.share-icon-label {   /*labels icones share*/
+.share-icon-label {
+  /*labels icones share*/
   font: 400 0.625rem 'Roboto', sans-serif;
   color: var(--main);
 }
 
-.share-this {   /*titulo modal share*/
+.share-this {
+  /*titulo modal share*/
   font: 300 1.25rem 'Roboto', sans-serif;
   color: var(--main);
   font-style: italic;
   margin-left: 1.875rem;
-
 }
 
-
-.infos-full .card-title {   /*titulo anuncio modal mais infos */
+.infos-full .card-title {
+  /*titulo anuncio modal mais infos */
   font: 700 1.25rem 'Roboto', sans-serif;
   margin-left: 0.625rem;
   margin-top: 0.9375rem;
 }
 
-.infos-full .area  {  /*area anuncio modal mais infos */
+.infos-full .area {
+  /*area anuncio modal mais infos */
   font: 700 1rem 'Roboto', sans-serif;
   margin-left: 0.625rem;
 }
 
-.infos-full .info-text {  /*descrição modal mais infos */
+.infos-full .info-text {
+  /*descrição modal mais infos */
   font: 400 1rem 'Roboto', sans-serif;
   margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  line-height: 1.25rem;
 }

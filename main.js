@@ -68,7 +68,8 @@ document.addEventListener('click', function (event) {
 
 /*OPEN AND CLOSE SHARE MODAL*/
 const moreInfosButton = document.querySelector('#more-infos')
-const moreInfosModal = document.querySelector('.infos-full')
+const moreInfosModal = document.querySelector('#more-infos-modal')
+ 
 
 moreInfosButton.addEventListener('click', openInfosModal)
 
