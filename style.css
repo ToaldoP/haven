@@ -366,6 +366,7 @@ img {
 }
 
 .condominium.description.infos-full {
+  visibility: visible;
 }
 
 /*=====BOTTOM-BAR=====*/
@@ -402,6 +403,8 @@ img {
   margin-top: -0.9375rem;
   display: grid;
   align-content: center;
+  padding-top: 0.2rem;
+
 }
 
 #icon-bar .qr-icon {
@@ -423,6 +426,32 @@ img {
   margin-top: -0.25rem;
 }
 
+/*====DOWNLOAD PAGE=====*/
+
+.menu-top.download{
+  display: grid;
+  justify-content: center;
+}
+
+.download-card {
+  width: 83.334vw;
+  height: 66.25vh;
+  position: relative;
+  z-index: 0;
+  top: calc(var(--top-bar-height) + 1.125rem); /*se afasta do top*/
+  border-radius: 5% 5% 0 0;
+  transform: translateX(0%);
+  display: grid;
+  justify-items: center;
+}
+
+
+.badge{
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+
+
 /*===Fonts====*/
 
 /*==TOP E CARD==*/
@@ -432,6 +461,12 @@ img {
   color: var(--background-icons);
   text-align: left;
 }
+
+.logo.download{
+  font-size: 3.5rem;
+}
+
+
 
 .description .card-title {
   /*titulo do card*/
@@ -555,4 +590,13 @@ img {
   margin-left: 0.625rem;
   margin-right: 0.625rem;
   line-height: 1.25rem;
+}
+
+
+.download-label{
+  font: 500 1.25rem 'Roboto' , sans-serif;
+  text-align: center;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+
 }
