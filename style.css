@@ -108,8 +108,7 @@ img {
   position: absolute;
   top: 0%;
   right: 0%;
-  margin-top: 1.5625rem;
-  margin-right: 0.9375rem;
+  margin: 1.5625rem 0.9375rem;
 }
 
 .favorite-button-icon {
@@ -124,6 +123,7 @@ img {
 .card .main-photo img {
   border-radius: 5%;
   height: 34.689vh;
+  object-fit: cover;
 }
 
 /* descrição do anuncio versão resumida */
@@ -163,8 +163,6 @@ img {
 
 /* ======== MODALS======== */
 
-/*======CONTACT-MODAL======*/
-
 #modals {
   display: grid;
   position: fixed;
@@ -190,6 +188,65 @@ img {
   visibility: visible;
   opacity: 1;
 }
+
+.gallery-overlay {
+  background-color: rgba(0, 0, 0, 1);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.gallery-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*======GALLERY-MODAL======*/
+
+#gallery-modal.show {
+  visibility: visible;
+}
+
+.opened-photo {
+  width: 100%;
+  height: auto;
+  max-height: 84.38vh;
+  object-fit: contain;
+  position: fixed;
+  z-index: 80;
+  margin-top: -60vh;
+  left: 0%;
+}
+
+.photo-gallery {
+  position: absolute;
+  z-index: 99999;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  overflow-y: auto;
+  width: 100vw;
+  height: auto;
+  margin-left: -6.33%;
+  bottom: 0%;
+  margin-bottom: 10vh;
+}
+
+.announce-photo {
+  background-color: var(--main);
+  width: 6rem;
+  height: 4rem;
+  position: relative;
+  z-index: 90;
+  object-fit: cover;
+}
+
+/*======CONTACT-MODAL======*/
 
 #contact-modal {
   background-color: var(--modal);
@@ -404,7 +461,6 @@ img {
   display: grid;
   align-content: center;
   padding-top: 0.2rem;
-
 }
 
 #icon-bar .qr-icon {
@@ -428,7 +484,7 @@ img {
 
 /*====DOWNLOAD PAGE=====*/
 
-.menu-top.download{
+.menu-top.download {
   display: grid;
   justify-content: center;
 }
@@ -445,28 +501,26 @@ img {
   justify-items: center;
 }
 
-
-.badge{
+.badge {
   width: 12rem;
   margin-bottom: 1rem;
 }
-
 
 /*===Fonts====*/
 
 /*==TOP E CARD==*/
 
 .logo {
+  /* logo titulo da pagina */
   font: 300 2.5rem 'Chivo', sans-serif;
   color: var(--background-icons);
   text-align: left;
 }
 
-.logo.download{
+.logo.download {
+  /* logo da pagina de download*/
   font-size: 3.5rem;
 }
-
-
 
 .description .card-title {
   /*titulo do card*/
@@ -592,11 +646,10 @@ img {
   line-height: 1.25rem;
 }
 
-
-.download-label{
-  font: 500 1.25rem 'Roboto' , sans-serif;
+.download-label {
+  font: 500 1.25rem 'Roboto', sans-serif;
   text-align: center;
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
-
+  color: var(--main);
 }

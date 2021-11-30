@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Versão development jQuery -->
-<script type="text/javascript" src="jquery.js"></script>
+
 
     <title>HaveN</title>
 
@@ -38,12 +37,13 @@
 
         <section class="card">
 
-           <div class="main-photo">
-              <img src="/assets/imgs/house1.jpg" alt="foto do imovel" />
+           <div class="main-photo gallery">
+              <img  src="/assets/imgs/gallery/house1.jpg" alt="foto do imovel" />
 
               <nav class="favorite-button"> <img class="favorite-button-icon"
                     src="/assets/icons/favorite-button-icon.svg" alt=""></nav>
            </div>
+
 
 
           <section class="description resume">
@@ -78,18 +78,40 @@
     <!-- bottom bar-->
     <footer">
     
-      <div id="navbar"></div>
-      <script type="text/javascript">
-        $(document).ready(function() {
-        $('#navbar').load('navbar.html');
-        });
-        </script>
+    <div id="bottom-bar">
+      <div id="icon-bar">
+        <div class="home-icon">
+          <a href="/index.html"><img src="assets/icons/home-icon2.svg" alt="icone de inicio" />
+          <p class="bottom-icon-label">Inicio</p></a>
+        </div>
+    
+        <div class="favorite-icon">
+          <a href="/download-app.html"><img src="assets/icons/favorite-icon.svg" alt="icone de favoritos" />
+          <p class="bottom-icon-label">Favoritos</p></a>
+        </div>
+    
+        <div class="qr-background">
+          <a href="#"> <img class="qr-icon" src="assets/icons/qr-icon.svg" alt="" /></a>
+        </div>
+    
+        <div class="announce-icon">
+          <a href="/download-app.html"><img src="assets/icons/announce-icon.svg" alt="icone de chat" />
+            <p class="bottom-icon-label" ></a>Anuncie</a>
+        </div>
+    
+        <div class="profile-icon">
+         <a href="/download-app.html"><img src="assets/icons/profile-icon.svg" alt="icone de perfil" />
+          <p class="bottom-icon-label">Perfil</p></a>
+        </div>
+      </div>
+    </div>
 
 
 
       <!--=====MODALS=======-->
-    <div class="modal-overlay">  </div>
-    <section id="modals" > <!--/share-modal-->
+    <div class="modal-overlay"></div>
+    <div class="gallery-overlay"></div>
+    <section id="modals" > 
     
       <!--=====CONTACT MODAL=====-->
      <section id="contact-modal-main">
@@ -177,7 +199,7 @@
            </div>
           </div>
         </nav>
-      </section>
+      </section><!--/share-modal-->
      
 
 
@@ -213,7 +235,7 @@
         <p id="elevator" class="info-text">Elevador</p>
         <p id="playground" class="info-text">Playground</p>
         <p id="pets" class="info-text">Aceita animais</p>
-        <p id="description" class="info-text">Apartamento aconchegante próximo a mercados, farmácias e padarias. 1km do metro Santana. Vizinhança tranquila com ponto de onibus na rua.</p>
+        <p id="description" class="info-text">Casa aconchegante próximo a mercados, farmácias e padarias. 1km do metro Santana. Vizinhança tranquila com ponto de onibus na rua.</p>
 
 
         
@@ -223,6 +245,34 @@
 
 
       </section> <!--/infos-modals-->
+
+
+
+
+        <!--=====PHOTO-GALLERY-MODAL=====-->
+
+      <section id="gallery-modal">
+     
+        <div class="photo-gallery">
+
+         
+          
+          <img class="opened-photo" src="/assets/imgs/gallery/house1.jpg" alt="">
+          
+   
+          <img class="announce-photo" src="/assets/imgs/gallery/house1.jpg" alt="" />
+          <img class="announce-photo" src="/assets/imgs/gallery/bedroom1.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/kitchen.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/room1.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/room2.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/room3.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/room4.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/room5.jpg" alt="">
+          <img class="announce-photo" src="/assets/imgs/gallery/room6.jpg" alt="=">
+
+        </div>
+      </section><!--/gallery-modal-->
+
 
 
 
