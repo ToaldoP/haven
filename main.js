@@ -21,10 +21,6 @@ function closeOverlay() {
   galleryOverlay.classList.remove('show')
 }
 
-
-
-
-
 /*OPEN AND CLOSE CONTACT MODAL*/
 const contactButton = document.querySelector('#contact-button')
 const contactModal = document.querySelector('#contact-modal')
@@ -47,10 +43,6 @@ document.addEventListener('click', function (event) {
 function closeContactModal() {
   contactModal.classList.remove('show')
 }
-
-
-
-
 
 /*OPEN AND CLOSE SHARE MODAL*/
 const shareButton = document.querySelector('#open-share-modal')
@@ -83,10 +75,6 @@ document.addEventListener('click', function (event) {
   }
 })
 
-
-
-
-
 /*OPEN AND CLOSE SHARE MODAL*/
 const moreInfosButton = document.querySelector('#more-infos')
 const moreInfosModal = document.querySelector('#more-infos-modal')
@@ -110,37 +98,28 @@ document.addEventListener('click', function (event) {
   }
 })
 
-
-
-
-
 /*OPEN AND CLOSE GALLERY MODAL & FAVORITE INTERACTION*/
 const galleryButton = document.querySelector('.main-photo')
 const galleryModal = document.querySelector('#gallery-modal')
 const favoriteButton = document.querySelector('.favorite-button')
 
-
 favoriteButton.addEventListener('click', alerta)
 
-function alerta(){
+function alerta(event) {
   console.log('favorito')
   event.stopImmediatePropagation()
 }
-
 
 galleryButton.addEventListener('click', openGalleryModal)
 
 function openGalleryModal(event) {
   galleryModal.classList.add('show')
   galleryOverlay.classList.add('show')
-
   event.stopImmediatePropagation()
 }
 
-
 function closeGalleryModal() {
   galleryModal.classList.remove('show')
-
 }
 
 document.addEventListener('click', function (event) {
@@ -150,10 +129,12 @@ document.addEventListener('click', function (event) {
   }
 })
 
+/*PHOTO-GALLERY INTERACTION*/
+const displayed = document.querySelector('#displayed')
+const galleryPhotos = document.querySelectorAll('.gallery-scroll img')
 
+galleryPhotos.forEach(img => img.addEventListener('click', displayPhoto))
 
-
-
-
-
-
+function displayPhoto(e) {
+  displayed.src = e.target.src
+}
