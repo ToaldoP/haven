@@ -130,11 +130,25 @@ document.addEventListener('click', function (event) {
 })
 
 /*PHOTO-GALLERY INTERACTION*/
-const displayed = document.querySelector('#displayed')
-const galleryPhotos = document.querySelectorAll('.gallery-scroll img')
+let displayed = document.querySelector('#displayed')
+let galleryPhotos = document.querySelectorAll('.gallery-scroll')
+let borderPhoto = document.querySelectorAll('.announce-photo')
 
-galleryPhotos.forEach(img => img.addEventListener('click', displayPhoto))
+galleryPhotos.forEach(li => li.addEventListener('click', displayPhoto))
 
 function displayPhoto(e) {
-  displayed.src = e.target.src
+  displayed.src = e.target.src  
 }
+
+
+for (var i = 0; i < borderPhoto.length; i++) {
+  borderPhoto[i].addEventListener("click", function() {
+    (document.querySelector('.show-border')) ? document.querySelector('.show-border').classList.remove('show-border') : '';
+    this.classList.add('show-border');
+  });
+} 
+
+
+
+
+ 

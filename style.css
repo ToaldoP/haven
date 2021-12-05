@@ -217,19 +217,20 @@ img {
   object-fit: contain;
   position: fixed;
   z-index: 80;
-  margin-top: -50vh;
+  margin-top: -55vh;
   left: 0%;
 }
 
 #gallery-modal .gallery-scroll {
   display: grid;
   justify-items: center;
+  align-items: center;
   gap: 0.5rem;
   grid-auto-flow: column;
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100vw;
-  height: auto;
+  height: 5rem;
   bottom: 0%;
   margin-bottom: 10vh;
   margin-left: -5%;
@@ -242,6 +243,11 @@ img {
   position: relative;
   z-index: 90;
   object-fit: cover;
+}
+
+.show-border {
+  transform: translateY(-10%);
+  transition: 0.1s;
 }
 
 /*======CONTACT-MODAL======*/
