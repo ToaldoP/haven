@@ -131,7 +131,7 @@ document.addEventListener('click', function (event) {
 
 /*PHOTO-GALLERY INTERACTION*/
 let displayed = document.querySelector('#displayed')
-let galleryPhotos = document.querySelectorAll('.gallery-scroll')
+let galleryPhotos = document.querySelectorAll('.gallery-row')
 let borderPhoto = document.querySelectorAll('.announce-photo')
 
 galleryPhotos.forEach(li => li.addEventListener('click', displayPhoto))
