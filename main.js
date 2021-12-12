@@ -103,10 +103,15 @@ const galleryButton = document.querySelector('.main-photo')
 const galleryModal = document.querySelector('#gallery-modal')
 const favoriteButton = document.querySelector('.favorite-button')
 
-favoriteButton.addEventListener('click', alerta)
+favoriteButton.addEventListener('click', favorited)
 
-function alerta(event) {
-  console.log('favorito')
+function favorited(event) {
+  favoriteButton.classList.toggle('favorited')
+  if (favoriteButton.classList.contains('favorited')) {
+    console.log('favoritado')
+  } else {
+    console.log('desfavoritado')
+  }
   event.stopImmediatePropagation()
 }
 
@@ -132,23 +137,21 @@ document.addEventListener('click', function (event) {
 /*PHOTO-GALLERY INTERACTION*/
 let displayed = document.querySelector('#displayed')
 let galleryPhotos = document.querySelectorAll('.gallery-row')
-let borderPhoto = document.querySelectorAll('.announce-photo')
+let addBorder = document.querySelectorAll('.announce-photos')
 
 galleryPhotos.forEach(li => li.addEventListener('click', displayPhoto))
 
 function displayPhoto(e) {
-  displayed.src = e.target.src  
+  displayed.src = e.target.src
 }
 
-
-for (var i = 0; i < borderPhoto.length; i++) {
-  borderPhoto[i].addEventListener("click", function() {
-    (document.querySelector('.show-border')) ? document.querySelector('.show-border').classList.remove('show-border') : '';
-    this.classList.add('show-border');
-  });
-} 
-
-
-
-
- 
+for (var i = 0; i < addBorder.length; i++) {
+  addBorder[i].addEventListener('click', function () {
+    galleryModal.querySelector('.show-border')
+      ? galleryModal
+          .querySelector('.show-border')
+          .classList.remove('show-border')
+      : ''
+    this.classList.add('show-border')
+  })
+}

@@ -101,9 +101,10 @@ img {
   top: calc(var(--top-bar-height) + 1.125rem); /*se afasta do top*/
   border-radius: 5% 5% 0 0;
   transform: translateX(0%);
+  overflow-y: scroll;
 }
 
-.favorite-button {
+.favorite-button { 
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
@@ -120,6 +121,12 @@ img {
 .favorite-button-icon {
   width: 1.375rem;
   max-height: 1.375rem;
+
+  
+}
+
+.favorite-button-icon.favorited{
+ 
 }
 
 .main-photo {
@@ -219,7 +226,7 @@ img {
 #gallery-modal .main-photo {
   width: 100%;
   height: auto;
-  max-height: 84.38vh;
+  max-height: 38vh;
   object-fit: contain;
   position: fixed;
   z-index: 80;
@@ -236,16 +243,16 @@ img {
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100vw;
-  height: 7rem;
+  height: 12.5vh;
   bottom: 0%;
-  margin-bottom: 10vh;
+  margin-top: -20vh;
   margin-left: -5%;
 }
 
-.announce-photo {
+.announce-photos {
   background-color: var(--main);
-  width: 6rem;
-  height: 4rem;
+  width: 26.67vw;
+  height: 10vh;
   position: relative;
   z-index: 90;
   object-fit: cover;
