@@ -66,6 +66,10 @@ img {
   height: var(--bottom-icon-size);
 }
 
+#open-share-modal.active {
+  visibility: hidden;
+}
+
 /*====CARD DO ANUNCIO====*/
 
 #card-wrapper {
@@ -83,7 +87,7 @@ img {
   content: '';
   width: 100%;
   height: 45vh;
-  max-height: 18em;
+  max-height: 19rem; /*media para iphone e galaxyfold*/
   position: absolute;
   background: var(--main);
   z-index: 0;
@@ -104,7 +108,7 @@ img {
   overflow-y: scroll;
 }
 
-.favorite-button { 
+.favorite-button {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
@@ -121,12 +125,9 @@ img {
 .favorite-button-icon {
   width: 1.375rem;
   max-height: 1.375rem;
-
-  
 }
 
-.favorite-button-icon.favorited{
- 
+.favorite-button-icon.favorited {
 }
 
 .main-photo {
@@ -148,6 +149,7 @@ img {
 /* botão de mais informações*/
 #more-infos {
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #more-infos .arrow {
@@ -271,6 +273,7 @@ img {
   width: 83.33vw;
   height: 66.41vh;
   max-height: 28rem;
+  min-height: 28rem;
   border-radius: 5% 5% 0 0;
   position: absolute;
   z-index: 130;
@@ -443,6 +446,48 @@ img {
   visibility: visible;
 }
 
+/*====DOWNLOAD-APP-MODAL=====*/
+
+#download-app-modal {
+  visibility: hidden;
+  width: 83.334vw;
+  height: 77vh;
+  position: absolute;
+  z-index: 100;
+  border-radius: 5% 5% 0 0;
+  transform: translateX(0%);
+  display: grid;
+  justify-items: center;
+  background-color: var(--card);
+  bottom: +12vh;
+}
+
+#download-app-modal.active {
+  visibility: visible;
+}
+
+.menu-top.active {
+  display: grid;
+  justify-content: center;
+}
+
+.logo-photo {
+  width: 100%;
+}
+
+.download-infos {
+  display: grid;
+  justify-items: center;
+  gap: 1vh;
+  position: relative;
+  bottom: 0%;
+}
+
+.badge {
+  width: 45vw;
+  max-width: 15rem;
+}
+
 /*=====BOTTOM-BAR=====*/
 
 #bottom-bar {
@@ -499,30 +544,6 @@ img {
   margin-top: -0.25rem;
 }
 
-/*====DOWNLOAD PAGE=====*/
-
-.menu-top.download {
-  display: grid;
-  justify-content: center;
-}
-
-.download-card {
-  width: 83.334vw;
-  height: 66.25vh;
-  position: relative;
-  z-index: 0;
-  top: calc(var(--top-bar-height) + 1.125rem); /*se afasta do top*/
-  border-radius: 5% 5% 0 0;
-  transform: translateX(0%);
-  display: grid;
-  justify-items: center;
-}
-
-.badge {
-  width: 12rem;
-  margin-bottom: 1rem;
-}
-
 /*===Fonts====*/
 
 /*==TOP E CARD==*/
@@ -534,7 +555,7 @@ img {
   text-align: left;
 }
 
-.logo.download {
+.logo.active {
   /* logo da pagina de download*/
   font-size: 3.5rem;
 }
@@ -666,7 +687,17 @@ img {
 .download-label {
   font: 500 1.25rem 'Roboto', sans-serif;
   text-align: center;
-  margin-top: 1.875rem;
-  margin-bottom: 1.875rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   color: var(--main);
+  position: relative;
+}
+
+.back-to-announce {
+  color: var(--main);
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-decoration: underline;
+  position: relative;
 }

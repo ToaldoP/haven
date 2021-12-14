@@ -21,6 +21,8 @@ function closeOverlay() {
   galleryOverlay.classList.remove('show')
 }
 
+
+
 /*OPEN AND CLOSE CONTACT MODAL*/
 const contactButton = document.querySelector('#contact-button')
 const contactModal = document.querySelector('#contact-modal')
@@ -139,7 +141,7 @@ let displayed = document.querySelector('#displayed')
 let galleryPhotos = document.querySelectorAll('.gallery-row')
 let addBorder = document.querySelectorAll('.announce-photos')
 
-galleryPhotos.forEach(li => li.addEventListener('click', displayPhoto))
+galleryPhotos.forEach(e => e.addEventListener('click', displayPhoto))
 
 function displayPhoto(e) {
   displayed.src = e.target.src
@@ -154,4 +156,30 @@ for (var i = 0; i < addBorder.length; i++) {
       : ''
     this.classList.add('show-border')
   })
+}
+
+/*DOWNLOAD-APP-MODAL*/
+
+const homeNav = document.querySelectorAll('.home-icon, .back-to-announce')
+const downloadNavIcon = document.querySelectorAll('.download-icon')
+
+downloadNavIcon.forEach(e => e.addEventListener('click', openDownloadModal))
+
+function openDownloadModal(event) {
+  document
+    .querySelectorAll(
+      '#download-app-modal, .logo, .menu-top, #open-share-modal'
+    )
+    .forEach(el => el.classList.add('active'))
+}
+
+/*close*/ 
+homeNav.forEach(e => e.addEventListener('click', closeDownloadModal))
+
+function closeDownloadModal() {
+  document
+    .querySelectorAll(
+      '#download-app-modal, .logo, .menu-top, #open-share-modal'
+    )
+    .forEach(el => el.classList.remove('active'))
 }
