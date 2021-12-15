@@ -43,6 +43,7 @@ img {
   background: var(--main);
   top: 0;
   left: 0;
+
   z-index: 100;
   position: fixed;
 }
@@ -59,6 +60,7 @@ img {
   z-index: 15;
   margin-left: calc(8.3335%);
   margin-right: calc(8.3335%);
+  margin-top: 0.875rem;
 }
 
 #open-share-modal {
@@ -470,6 +472,7 @@ img {
 .menu-top.active {
   display: grid;
   justify-content: center;
+  margin-top: 0;
 }
 
 .logo-photo {
