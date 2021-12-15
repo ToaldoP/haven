@@ -21,6 +21,17 @@ html {
 body {
   min-height: 100%;
 }
+
+/* Full height centered app container */
+#app-container {
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  max-width: 100%;
+
+  min-width: 100%;
+}
 ::-webkit-scrollbar {
   background: transparent; /* make scrollbar transparent */
 }
