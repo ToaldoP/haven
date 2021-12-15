@@ -1,3 +1,10 @@
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    // This hides the address bar:
+    window.scrollTo(0, 1)
+  }, 0)
+})
+
 /*CLOSE OVERLAY*/
 const modalOverlay = document.querySelector('.modal-overlay')
 const galleryOverlay = document.querySelector('.gallery-overlay')
@@ -20,8 +27,6 @@ function closeOverlay() {
   modalOverlay.classList.remove('show')
   galleryOverlay.classList.remove('show')
 }
-
-
 
 /*OPEN AND CLOSE CONTACT MODAL*/
 const contactButton = document.querySelector('#contact-button')
@@ -173,7 +178,7 @@ function openDownloadModal(event) {
     .forEach(el => el.classList.add('active'))
 }
 
-/*close*/ 
+/*close*/
 homeNav.forEach(e => e.addEventListener('click', closeDownloadModal))
 
 function closeDownloadModal() {
