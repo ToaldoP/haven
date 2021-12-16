@@ -161,6 +161,7 @@ img {
 
 /*botão para entrar em contato*/
 #contact-button {
+  visibility: visible;
   background-color: var(--main);
   width: 12.5rem;
   height: 2.5rem;
@@ -178,6 +179,9 @@ img {
   outline: none;
 }
 
+#contact-button.active {
+  visibility: hidden;
+}
 /* ======== MODALS======== */
 
 #modals {
@@ -453,7 +457,7 @@ img {
 #download-app-modal {
   visibility: hidden;
   width: 83.334vw;
-  height: 77vh;
+  height: 75vh;
   position: absolute;
   z-index: 100;
   border-radius: 5% 5% 0 0;
@@ -461,7 +465,7 @@ img {
   display: grid;
   justify-items: center;
   background-color: var(--card);
-  bottom: +12vh;
+  bottom: +14vh;
 }
 
 #download-app-modal.active {
@@ -483,7 +487,7 @@ img {
   justify-items: center;
   gap: 1vh;
   position: relative;
-  bottom: 0%;
+  bottom: 8%;
 }
 
 .badge {

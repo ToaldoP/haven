@@ -173,7 +173,7 @@ downloadNavIcon.forEach(e => e.addEventListener('click', openDownloadModal))
 function openDownloadModal(event) {
   document
     .querySelectorAll(
-      '#download-app-modal, .logo, .menu-top, #open-share-modal'
+      '#download-app-modal, .logo, .menu-top, #open-share-modal, #contact-button'
     )
     .forEach(el => el.classList.add('active'))
 }
@@ -184,7 +184,7 @@ homeNav.forEach(e => e.addEventListener('click', closeDownloadModal))
 function closeDownloadModal() {
   document
     .querySelectorAll(
-      '#download-app-modal, .logo, .menu-top, #open-share-modal'
+      '#download-app-modal, .logo, .menu-top, #open-share-modal,#contact-button'
     )
     .forEach(el => el.classList.remove('active'))
 }
