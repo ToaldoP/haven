@@ -1,0 +1,16 @@
+{
+  "short_name": "Haven",
+  "name": "Haven",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "assets/icons/house-app-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/"
+}
