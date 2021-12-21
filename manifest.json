@@ -2,11 +2,12 @@
   "short_name": "HaveN",
   "name": "HaveN",
   "start_url": "/",
+  "scope": "/",
   "background_color": "#484848",
   "theme_color": "#484848",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/",
+
   "icons": [
     {
       "src": "assets/icons/haven-icon-app.png",
