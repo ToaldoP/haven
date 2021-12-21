@@ -2,8 +2,8 @@ const Haven = 'haven-pwa'
 const assets = [
   '/',
   '/index.html',
-  '/css/style.css',
-  '/js/main.js',
+  '/style.css',
+  '/main.js',
   '/assets/icons/haven-icon-app.png'
 ]
 
@@ -14,6 +14,10 @@ self.addEventListener('install', installEvent => {
     })
   )
 })
+
+
+
+
 
 self.addEventListener('fetch', fetchEvent => {
   fetchEvent.respondWith(

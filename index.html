@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="apple-mobile-web-app-status-bar" content="#484848" />
+    <meta name="theme-color" content="#484848" />
 
 
 
@@ -15,10 +16,9 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link rel="haven-icon-app" href="assets/icons/haven-icon-app.png" />
-    <meta name="apple-mobile-web-app-status-bar" content="#484848" />
-    <meta name="theme-color" content="#484848" />
+   
   </head>
 
   <!--FONTS-->
@@ -334,5 +334,17 @@
     </footer>
   </body>
   <script src="main.js"></script>
+  
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function () {
+        console.log('service worker registered');
+      })
+      .catch(function () {
+        console.warn('service worker failed');
+      });
+  }
+</script>
  
 </html>
