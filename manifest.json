@@ -1,11 +1,10 @@
 {
   "short_name": "HaveN",
   "name": "HaveN",
-  "start_url": "/index.html",
+  "start_url": "/",
   "background_color": "#484848",
   "theme_color": "#484848",
-  "start_url": "/index.html",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "icons": [
