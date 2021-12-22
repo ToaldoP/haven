@@ -335,16 +335,16 @@
   </body>
   <script src="main.js"></script>
   
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceWorker.js')
-      .then(function () {
-        console.log('service worker registered');
-      })
-      .catch(function () {
-        console.warn('service worker failed');
-      });
-  }
-</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/serviceWorker.js')
+        .then(function () {
+          console.log('service worker registered');
+        })
+        .catch(function () {
+          console.warn('service worker failed cacete');
+        });
+    }
+  </script>
  
 </html>
