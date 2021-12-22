@@ -1,6 +1,7 @@
 {
   "short_name": "HaveN",
   "name": "HaveN",
+  "id" : "./",
   "start_url": "./",
   "scope": "/",
   "background_color": "#484848",
