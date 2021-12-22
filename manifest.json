@@ -6,7 +6,7 @@
   "scope": "/",
   "background_color": "#484848",
   "theme_color": "#484848",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
 
   "icons": [
@@ -15,5 +15,6 @@
       "sizes": "192x192",
       "type": "image/png"
     }
-  ]
+  ],
+  "splash_pages": null
 }

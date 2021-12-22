@@ -422,7 +422,7 @@ img {
   background-color: var(--card);
   visibility: hidden;
   width: 83.33vw;
-  height: calc(100vh - var(--top-bar-height));
+  height: calc(100vh - var(--top-bar-height) * 2);
   border-radius: 0.9375rem 0.9375rem 0 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   transition: 0.1s;
@@ -466,6 +466,7 @@ img {
   justify-items: center;
   background-color: var(--card);
   bottom: +14vh;
+  overflow-y: auto;
 }
 
 #download-app-modal.active {
