@@ -84,7 +84,7 @@ document.addEventListener('click', function (event) {
   }
 })
 
-/*OPEN AND CLOSE SHARE MODAL*/
+/*OPEN AND CLOSE MORE INFOS MODAL*/
 const moreInfosButton = document.querySelector('#more-infos')
 const moreInfosModal = document.querySelector('#more-infos-modal')
 
@@ -118,6 +118,9 @@ function favorited(event) {
   favoriteButton.classList.toggle('favorited')
   if (favoriteButton.classList.contains('favorited')) {
     console.log('favoritado')
+   favoriteButton.src = ""; 
+
+    
   } else {
     console.log('desfavoritado')
   }

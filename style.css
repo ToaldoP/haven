@@ -77,7 +77,6 @@ img {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 0;
   z-index: 10;
   display: grid;
   justify-content: center;
@@ -104,16 +103,16 @@ img {
   z-index: 0;
   background-color: var(--card);
   top: calc(var(--top-bar-height) + 1.125rem);
-  border-radius: 5% 5% 0 0;
+  border-radius: 1rem 1rem 0 0;
   transform: translateX(0%);
   overflow-y: scroll;
   padding-bottom: 2rem;
 }
 
 .favorite-button {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 100%;
   background-color: var(--main);
   display: grid;
   justify-content: center;
@@ -129,7 +128,13 @@ img {
   max-height: 1.375rem;
 }
 
-.favorite-button-icon.favorited {
+.favorite-button.favorited {
+  background-image: url(assets/icons/favorite-button-icon-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 100%;
 }
 
 .main-photo {
@@ -137,11 +142,14 @@ img {
 }
 
 .card .main-photo img {
-  border-radius: 5%;
+  border-radius: 1rem;
   height: 34.689vh;
   object-fit: cover;
 }
 
+.card .favorite-button img {
+  border-radius: 0.3rem;
+}
 /* descrição do anuncio versão resumida */
 .description {
   margin-top: 0.9375rem;
@@ -280,7 +288,7 @@ img {
   height: 66.41vh;
   max-height: 28rem;
   min-height: 28rem;
-  border-radius: 5% 5% 0 0;
+  border-radius: 1rem 1rem 0 0;
   position: absolute;
   z-index: 130;
   bottom: 0%;
@@ -356,7 +364,7 @@ img {
   height: 31.875vh;
   min-height: 12.75rem;
   max-height: 14rem;
-  border-radius: 5% 5% 0 0;
+  border-radius: 1rem 1rem 0 0;
   position: absolute;
   padding-top: 0.9375rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -423,7 +431,7 @@ img {
   visibility: hidden;
   width: 83.33vw;
   height: calc(100vh - var(--top-bar-height) * 2);
-  border-radius: 0.9375rem 0.9375rem 0 0;
+  border-radius: 1rem 1rem 0 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   transition: 0.1s;
   overflow-y: auto;
@@ -457,7 +465,7 @@ img {
 #download-app-modal {
   visibility: hidden;
   width: 83.334vw;
-  height: 75vh;
+  height: 74vh;
   position: absolute;
   z-index: 100;
   border-radius: 5% 5% 0 0;
@@ -466,7 +474,7 @@ img {
   justify-items: center;
   background-color: var(--card);
   bottom: +14vh;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 #download-app-modal.active {
@@ -479,8 +487,10 @@ img {
   margin-top: 0;
 }
 
-.logo-photo {
+.logo-photo img {
   width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--card);
 }
 
 .download-infos {
