@@ -118,9 +118,7 @@ function favorited(event) {
   favoriteButton.classList.toggle('favorited')
   if (favoriteButton.classList.contains('favorited')) {
     console.log('favoritado')
-   favoriteButton.src = ""; 
 
-    
   } else {
     console.log('desfavoritado')
   }
