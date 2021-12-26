@@ -5,8 +5,6 @@ window.addEventListener('load', function () {
   }, 0)
 })
 
-
-
 /*CLOSE OVERLAY*/
 const modalOverlay = document.querySelector('.modal-overlay')
 const galleryOverlay = document.querySelector('.gallery-overlay')
@@ -118,7 +116,6 @@ function favorited(event) {
   favoriteButton.classList.toggle('favorited')
   if (favoriteButton.classList.contains('favorited')) {
     console.log('favoritado')
-
   } else {
     console.log('desfavoritado')
   }
