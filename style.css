@@ -469,14 +469,14 @@ img {
   visibility: hidden;
   width: 83.334vw;
   height: 74vh;
-  position: absolute;
+  position: relative;
   z-index: 100;
   border-radius: 5% 5% 0 0;
   transform: translateX(0%);
   display: grid;
   justify-items: center;
   background-color: var(--card);
-  top: -89vh;
+  top: -15vh;
   overflow-y: scroll;
   border-radius: 1rem 1rem 0 0;
 }
