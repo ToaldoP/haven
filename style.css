@@ -128,7 +128,6 @@ img {
 }
 
 .favorite-button-icon {
-  width: 1.4rem;
   max-height: 1.4rem;
 }
 
@@ -477,7 +476,7 @@ img {
   display: grid;
   justify-items: center;
   background-color: var(--card);
-  top: -89vh;
+  bottom: 15vh;
   overflow-y: scroll;
   border-radius: 1rem 1rem 0 0;
 }
