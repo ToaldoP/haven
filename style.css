@@ -105,8 +105,11 @@ img {
   top: calc(var(--top-bar-height) + 1.125rem);
   border-radius: 1rem 1rem 0 0;
   transform: translateX(0%);
-  overflow-y: scroll;
   padding-bottom: 2rem;
+}
+
+.card.active {
+  visibility: hidden;
 }
 
 .favorite-button {
@@ -148,7 +151,7 @@ img {
 }
 
 .card .favorite-button img {
-  border-radius: 0.3rem;
+  border-radius: 0rem;
 }
 /* descrição do anuncio versão resumida */
 .description {
@@ -473,8 +476,9 @@ img {
   display: grid;
   justify-items: center;
   background-color: var(--card);
-  bottom: +14vh;
+  top: -89vh;
   overflow-y: scroll;
+  border-radius: 1rem 1rem 0 0;
 }
 
 #download-app-modal.active {
@@ -488,9 +492,8 @@ img {
 }
 
 .logo-photo img {
-  width: 100%;
+  width: 83.334vw;
   border-radius: 1rem;
-  border: 1px solid var(--card);
 }
 
 .download-infos {

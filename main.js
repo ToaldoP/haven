@@ -170,13 +170,14 @@ for (var i = 0; i < addBorder.length; i++) {
 
 const homeNav = document.querySelectorAll('.home-icon, .back-to-announce')
 const downloadNavIcon = document.querySelectorAll('.download-icon')
+const card = document.querySelector('.card')
 
 downloadNavIcon.forEach(e => e.addEventListener('click', openDownloadModal))
 
 function openDownloadModal(event) {
   document
     .querySelectorAll(
-      '#download-app-modal, .logo, .menu-top, #open-share-modal, #contact-button'
+      '#download-app-modal, .logo, .menu-top, #open-share-modal, #contact-button, .card'
     )
     .forEach(el => el.classList.add('active'))
 }
@@ -187,7 +188,7 @@ homeNav.forEach(e => e.addEventListener('click', closeDownloadModal))
 function closeDownloadModal() {
   document
     .querySelectorAll(
-      '#download-app-modal, .logo, .menu-top, #open-share-modal,#contact-button'
+      '#download-app-modal, .logo, .menu-top, #open-share-modal,#contact-button, .card'
     )
     .forEach(el => el.classList.remove('active'))
 }
