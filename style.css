@@ -488,7 +488,7 @@ img {
 .menu-top.active {
   display: grid;
   justify-content: center;
-  position: relative;
+  position: fixed;
   z-index: 100;
 }
 
