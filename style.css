@@ -468,7 +468,7 @@ img {
 #download-app-modal {
   visibility: hidden;
   width: 83.334vw;
-  height: 74vh;
+  height: 66.25vh;
   position: absolute;
   z-index: 100;
   border-radius: 5% 5% 0 0;
@@ -476,7 +476,7 @@ img {
   display: grid;
   justify-items: center;
   background-color: var(--card);
-  bottom: 15vh;
+  top: -88vh;
   border-radius: 1rem 1rem 0 0;
   overflow-y: auto;
 }
@@ -485,12 +485,12 @@ img {
   visibility: visible;
 }
 
-/* .menu-top.active {
+.menu-top.active {
   display: grid;
   justify-content: center;
   position: relative;
   z-index: 100;
-} */
+}
 
 .logo-photo img {
   width: 83.334vw;
