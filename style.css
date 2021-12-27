@@ -476,7 +476,7 @@ img {
   display: grid;
   justify-items: center;
   background-color: var(--card);
-  bottom: 15vh;
+  top: -14vh;
   border-radius: 1rem 1rem 0 0;
 }
 
