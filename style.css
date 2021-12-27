@@ -479,7 +479,7 @@ img {
   top: 12vh;
   border-radius: 1rem 1rem 0 0;
   overflow-y: auto;
-  background-color: red;
+ 
 }
 
 #download-app-modal.active {
