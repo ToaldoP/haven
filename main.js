@@ -5,7 +5,6 @@ window.addEventListener('load', function () {
   }, 0)
 })
 
-
 /*CLOSE OVERLAY*/
 const modalOverlay = document.querySelector('.modal-overlay')
 const galleryOverlay = document.querySelector('.gallery-overlay')
@@ -142,8 +141,6 @@ function favorited(event) {
 //   }
 // })
 
-
-
 // /*PHOTO-GALLERY INTERACTION*/
 // let displayed = document.querySelector('#displayed')
 // let galleryPhotos = document.querySelectorAll('.gallery-row')
@@ -155,9 +152,6 @@ function favorited(event) {
 //   displayed.src = e.target.src
 // }
 
-
-
-
 // for (var i = 0; i < addBorder.length; i++) {
 //   addBorder[i].addEventListener('click', function () {
 //     galleryModal.querySelector('.show-border')
@@ -168,8 +162,6 @@ function favorited(event) {
 //     this.classList.add('show-border')
 //   })
 // }
-
-
 
 /*DOWNLOAD-APP-MODAL*/
 
