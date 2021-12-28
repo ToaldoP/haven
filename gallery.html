@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    <title>gallery</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="apple-mobile-web-app-status-bar" content="#484848" />
+    <meta name="theme-color" content="#484848" />
+
     />
     <!-- Link Swiper's CSS -->
     <link
@@ -15,7 +20,7 @@
 
      
       <div class="swiper mySwiper2">
-        <div class="close-swiper"><a onclick="window.history.go(-1); return false;" style="cursor: pointer;">.</a>
+        <a class="close-swiper" onclick="window.history.go(-1); return false;"><div class="close-swiper"></a>
         </div>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -100,9 +105,7 @@
         position: absolute;
         z-index: 100000;
         top: 0%;
-        display: grid;
-        align-items: center;
-        justify-items: center;
+     
 
 
       }
