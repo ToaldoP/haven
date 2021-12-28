@@ -97,7 +97,7 @@ img {
 
 /*cria e posiona card do anuncio com imagem*/
 .card {
-  width: 83.334vw;
+  width: 83.4vw;
   height: 66.25vh;
   position: relative;
   z-index: 0;
@@ -128,7 +128,8 @@ img {
 }
 
 .favorite-button-icon {
-  max-height: 1.4rem;
+  max-height: 1.5rem;
+  position: relative;
 }
 
 .favorite-button.favorited {
@@ -221,6 +222,10 @@ img {
   opacity: 1;
 }
 
+
+
+/*======GALLERY-MODAL======
+
 .gallery-overlay {
   background-color: rgba(0, 0, 0, 1);
   width: 100vw;
@@ -235,8 +240,6 @@ img {
   visibility: visible;
   opacity: 1;
 }
-
-/*======GALLERY-MODAL======*/
 
 #gallery-modal.show {
   visibility: visible;
@@ -281,6 +284,8 @@ img {
   transform: translateY(-10%);
   transition: 0.2s;
 }
+*/
+
 
 /*======CONTACT-MODAL======*/
 
@@ -479,7 +484,6 @@ img {
   top: 12vh;
   border-radius: 1rem 1rem 0 0;
   overflow-y: auto;
- 
 }
 
 #download-app-modal.active {

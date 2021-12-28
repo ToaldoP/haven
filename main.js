@@ -5,6 +5,7 @@ window.addEventListener('load', function () {
   }, 0)
 })
 
+
 /*CLOSE OVERLAY*/
 const modalOverlay = document.querySelector('.modal-overlay')
 const galleryOverlay = document.querySelector('.gallery-overlay')
@@ -122,46 +123,53 @@ function favorited(event) {
   event.stopImmediatePropagation()
 }
 
-galleryButton.addEventListener('click', openGalleryModal)
+// galleryButton.addEventListener('click', openGalleryModal)
 
-function openGalleryModal(event) {
-  galleryModal.classList.add('show')
-  galleryOverlay.classList.add('show')
-  event.stopImmediatePropagation()
-}
+// function openGalleryModal(event) {
+//   galleryModal.classList.add('show')
+//   galleryOverlay.classList.add('show')
+//   event.stopImmediatePropagation()
+// }
 
-function closeGalleryModal() {
-  galleryModal.classList.remove('show')
-}
+// function closeGalleryModal() {
+//   galleryModal.classList.remove('show')
+// }
 
-document.addEventListener('click', function (event) {
-  let clickOutside = !galleryModal.contains(event.target)
-  if (clickOutside) {
-    closeGalleryModal()
-  }
-})
+// document.addEventListener('click', function (event) {
+//   let clickOutside = !galleryModal.contains(event.target)
+//   if (clickOutside) {
+//     closeGalleryModal()
+//   }
+// })
 
-/*PHOTO-GALLERY INTERACTION*/
-let displayed = document.querySelector('#displayed')
-let galleryPhotos = document.querySelectorAll('.gallery-row')
-let addBorder = document.querySelectorAll('.announce-photos')
 
-galleryPhotos.forEach(e => e.addEventListener('click', displayPhoto))
 
-function displayPhoto(e) {
-  displayed.src = e.target.src
-}
+// /*PHOTO-GALLERY INTERACTION*/
+// let displayed = document.querySelector('#displayed')
+// let galleryPhotos = document.querySelectorAll('.gallery-row')
+// let addBorder = document.querySelectorAll('.announce-photos')
 
-for (var i = 0; i < addBorder.length; i++) {
-  addBorder[i].addEventListener('click', function () {
-    galleryModal.querySelector('.show-border')
-      ? galleryModal
-          .querySelector('.show-border')
-          .classList.remove('show-border')
-      : ''
-    this.classList.add('show-border')
-  })
-}
+// galleryPhotos.forEach(e => e.addEventListener('click', displayPhoto))
+
+// function displayPhoto(e) {
+//   displayed.src = e.target.src
+// }
+
+
+
+
+// for (var i = 0; i < addBorder.length; i++) {
+//   addBorder[i].addEventListener('click', function () {
+//     galleryModal.querySelector('.show-border')
+//       ? galleryModal
+//           .querySelector('.show-border')
+//           .classList.remove('show-border')
+//       : ''
+//     this.classList.add('show-border')
+//   })
+// }
+
+
 
 /*DOWNLOAD-APP-MODAL*/
 
