@@ -147,27 +147,6 @@ document.addEventListener('click', function (event) {
   }
 })
 
-// /*PHOTO-GALLERY INTERACTION*/
-// let displayed = document.querySelector('#displayed')
-// let galleryPhotos = document.querySelectorAll('.gallery-row')
-// let addBorder = document.querySelectorAll('.announce-photos')
-
-// galleryPhotos.forEach(e => e.addEventListener('click', displayPhoto))
-
-// function displayPhoto(e) {
-//   displayed.src = e.target.src
-// }
-
-// for (var i = 0; i < addBorder.length; i++) {
-//   addBorder[i].addEventListener('click', function () {
-//     galleryModal.querySelector('.show-border')
-//       ? galleryModal
-//           .querySelector('.show-border')
-//           .classList.remove('show-border')
-//       : ''
-//     this.classList.add('show-border')
-//   })
-// }
 
 /*DOWNLOAD-APP-MODAL*/
 

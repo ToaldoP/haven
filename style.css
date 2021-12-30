@@ -34,6 +34,8 @@ img {
   --modal-margin: 0 8.335% 0 8.335%;
 }
 
+
+
 /*====TOP-BAR====*/
 
 /*cria top-bar e posiciona*/
@@ -281,51 +283,7 @@ img {
   transform: translateY(-2vh);
 }
 
-/*
-#gallery-modal.show {
-  visibility: visible;
-}
 
-#gallery-modal .main-photo {
-  width: 100%;
-  height: auto;
-  max-height: 38vh;
-  object-fit: contain;
-  position: fixed;
-  z-index: 80;
-  margin-top: -55vh;
-  left: 0%;
-}
-
-#gallery-modal .gallery-row {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  gap: 0.5rem;
-  grid-auto-flow: column;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 100vw;
-  height: 12.5vh;
-  bottom: 0%;
-  margin-top: -20vh;
-  margin-left: -5%;
-}
-
-.announce-photos {
-  background-color: var(--main);
-  width: 26.67vw;
-  height: 10vh;
-  position: relative;
-  z-index: 90;
-  object-fit: cover;
-}
-
-.show-border {
-  transform: translateY(-10%);
-  transition: 0.2s;
-}
-*/
 
 /*======CONTACT-MODAL======*/
 
@@ -525,7 +483,6 @@ img {
   justify-items: center;
   background-color: var(--card);
   top: 12vh;
-  border-radius: 1rem 1rem 0 0;
   overflow-y: auto;
   margin: var(--modal-margin);
 }
@@ -540,8 +497,8 @@ img {
 }
 
 .logo-photo img {
-  width: 83.334vw;
-  border-radius: 1rem;
+  width: 83vw;
+  margin-top: 0.12vh;
 }
 
 .download-infos {

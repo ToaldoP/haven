@@ -1,0 +1,166 @@
+<!--=====PHOTO-GALLERY-MODAL=====-->
+
+<section id="gallery-modal">
+  <div class="gallery-wrapper">
+    <div class="main-photo">
+      <img
+        id="displayed"
+        src="https://images.unsplash.com/photo-1430285561322-7808604715df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        alt=""
+      />
+    </div>
+    -->
+
+    <ul class="gallery-row">
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1430285561322-7808604715df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/flagged/photo-1556438758-df7b9e0c0fe4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1630699376059-b781970715b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1630699376106-d550afb865bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1616627561839-074385245ff6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80"
+          alt="="
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+          alt="="
+        />
+      </li>
+
+      <li>
+        <img
+          class="announce-photos"
+          src="https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt="="
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  #gallery-modal.show {
+    visibility: visible;
+  }
+
+  #gallery-modal .main-photo {
+    width: 100%;
+    height: auto;
+    max-height: 38vh;
+    object-fit: contain;
+    position: fixed;
+    z-index: 80;
+    margin-top: -55vh;
+    left: 0%;
+  }
+
+  #gallery-modal .gallery-row {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 12.5vh;
+    bottom: 0%;
+    margin-top: -20vh;
+    margin-left: -5%;
+  }
+
+  .announce-photos {
+    background-color: var(--main);
+    width: 26.67vw;
+    height: 10vh;
+    position: relative;
+    z-index: 90;
+    object-fit: cover;
+  }
+
+  .show-border {
+    transform: translateY(-10%);
+    transition: 0.2s;
+  }
+</style>
+
+<script>
+  /*PHOTO-GALLERY INTERACTION*/
+  let displayed = document.querySelector('#displayed')
+  let galleryPhotos = document.querySelectorAll('.gallery-row')
+  let addBorder = document.querySelectorAll('.announce-photos')
+
+  galleryPhotos.forEach(e => e.addEventListener('click', displayPhoto))
+
+  function displayPhoto(e) {
+    displayed.src = e.target.src
+  }
+
+  for (var i = 0; i < addBorder.length; i++) {
+    addBorder[i].addEventListener('click', function () {
+      galleryModal.querySelector('.show-border')
+        ? galleryModal
+            .querySelector('.show-border')
+            .classList.remove('show-border')
+        : ''
+      this.classList.add('show-border')
+    })
+  }
+</script>
