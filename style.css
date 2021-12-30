@@ -31,6 +31,7 @@ img {
   --top-bar-height: 8.75vh;
   --bottom-bar-height: 3.5rem;
   --bottom-icon-size: 1.5rem;
+  --modal-margin: 0 8.335% 0 8.335%;
 }
 
 /*====TOP-BAR====*/
@@ -114,8 +115,8 @@ img {
 }
 
 .favorite-button {
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 100%;
   background-color: var(--main);
   display: grid;
@@ -136,8 +137,8 @@ img {
   background-image: url(assets/icons/favorite-button-icon-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 100%;
 }
 
@@ -201,9 +202,7 @@ img {
   position: fixed;
   z-index: 9999;
   bottom: 0%;
-  width: 83.33vw;
-  margin-left: 8.335%;
-  margin-right: 8.335%;
+  width: 100%;
   visibility: hidden;
 }
 
@@ -222,7 +221,7 @@ img {
   opacity: 1;
 }
 
-/*======GALLERY-MODAL======
+/*======GALLERY-MODAL======*/
 
 .gallery-overlay {
   background-color: rgba(0, 0, 0, 1);
@@ -239,6 +238,50 @@ img {
   opacity: 1;
 }
 
+/*gallery-swiper*/
+#gallery-swiper {
+  visibility: hidden;
+}
+
+#gallery-swiper.show {
+  visibility: visible;
+  width: 100vw;
+  height: 80vh;
+  bottom: 0;
+}
+
+.swiper-slide img {
+  /*todas imagens*/
+  width: 100%;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+.mySwiper2 img {
+  /*imagem mostrada*/
+  width: 100%;
+  margin-bottom: -10vh;
+}
+
+.mySwiper img {
+  /*thumbs container*/
+  height: 14vh;
+  max-height: 16vh;
+  margin-top: 12vh;
+  object-fit: cover;
+}
+
+.mySwiper .swiper-slide img {
+  opacity: 1;
+  transform: translateY(0vh);
+}
+
+.mySwiper .swiper-slide-thumb-active img {
+  opacity: 1;
+  transform: translateY(-2vh);
+}
+
+/*
 #gallery-modal.show {
   visibility: visible;
 }
@@ -300,6 +343,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(100%);
   transition: 0.1s;
+  margin: var(--modal-margin);
 }
 
 #contact-modal.show {
@@ -376,6 +420,7 @@ img {
   transform: translateY(100%);
   transition: 0.1s;
   bottom: 0;
+  margin: var(--modal-margin);
 }
 
 #share-modal.show {
@@ -443,6 +488,7 @@ img {
   bottom: 0%;
   transform: translateY(100%);
   position: absolute;
+  margin: var(--modal-margin);
 }
 
 #more-infos-modal.show {
@@ -481,6 +527,7 @@ img {
   top: 12vh;
   border-radius: 1rem 1rem 0 0;
   overflow-y: auto;
+  margin: var(--modal-margin);
 }
 
 #download-app-modal.active {

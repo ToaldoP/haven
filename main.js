@@ -5,6 +5,12 @@ window.addEventListener('load', function () {
   }, 0)
 })
 
+
+
+
+
+
+
 /*CLOSE OVERLAY*/
 const modalOverlay = document.querySelector('.modal-overlay')
 const galleryOverlay = document.querySelector('.gallery-overlay')
@@ -107,7 +113,7 @@ document.addEventListener('click', function (event) {
 
 /*OPEN AND CLOSE GALLERY MODAL & FAVORITE INTERACTION*/
 const galleryButton = document.querySelector('.main-photo')
-const galleryModal = document.querySelector('#gallery-modal')
+const galleryModal = document.querySelector('#gallery-swiper')
 const favoriteButton = document.querySelector('.favorite-button')
 
 favoriteButton.addEventListener('click', favorited)
@@ -122,24 +128,24 @@ function favorited(event) {
   event.stopImmediatePropagation()
 }
 
-// galleryButton.addEventListener('click', openGalleryModal)
+galleryButton.addEventListener('click', openGalleryModal)
 
-// function openGalleryModal(event) {
-//   galleryModal.classList.add('show')
-//   galleryOverlay.classList.add('show')
-//   event.stopImmediatePropagation()
-// }
+function openGalleryModal(event) {
+  galleryModal.classList.add('show')
+  galleryOverlay.classList.add('show')
+  event.stopImmediatePropagation()
+}
 
-// function closeGalleryModal() {
-//   galleryModal.classList.remove('show')
-// }
+function closeGalleryModal() {
+  galleryModal.classList.remove('show')
+}
 
-// document.addEventListener('click', function (event) {
-//   let clickOutside = !galleryModal.contains(event.target)
-//   if (clickOutside) {
-//     closeGalleryModal()
-//   }
-// })
+document.addEventListener('click', function (event) {
+  let clickOutside = !galleryModal.contains(event.target)
+  if (clickOutside) {
+    closeGalleryModal()
+  }
+})
 
 // /*PHOTO-GALLERY INTERACTION*/
 // let displayed = document.querySelector('#displayed')
